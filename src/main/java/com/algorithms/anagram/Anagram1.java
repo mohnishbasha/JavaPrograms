@@ -51,13 +51,13 @@ public class Anagram1 {
     public static char[] charArray;
 
     public Anagram1(String word) {
-        charArray = word.toCharArray();
-        doAnagram(charArray.length);
+        charArray = word.toCharArray(); // L,O,V,E
+        doAnagram(charArray.length);    // 4
     }
 
     public void changeOrder(int newsize) {
         int j;
-        int pointAt = charArray.length - newsize;
+        int pointAt = charArray.length - newsize; // 1
         char temp = charArray[pointAt];
 
         for (j = pointAt + 1; j < charArray.length; j++) {
@@ -90,6 +90,7 @@ public class Anagram1 {
 
     public static void main(String args[]) {
         Anagram1 test1 = new Anagram1("Love");
+        Anagram1 test2 = new Anagram1("Dogs");
 
 
 
