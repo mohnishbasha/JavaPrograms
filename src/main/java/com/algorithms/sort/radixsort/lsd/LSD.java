@@ -1,4 +1,4 @@
-package com.algorithms.sort.radixsort.sort.radixsort.lsd;
+package com.algorithms.sort.radixsort.lsd;
 
 /******************************************************************************
  *

@@ -1,4 +1,4 @@
-package org.algorithms;
+package com.algorithms.factorial;
 
 //numbers/Factorial.java - Computes factorial
 //Fred Swartz - 2003-11-02

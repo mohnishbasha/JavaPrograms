@@ -1,4 +1,6 @@
-package org.algorithms;
+package com.algorithms.palindrome;
+
+
 public class PalindromeRecursion
 {
     public PalindromeRecursion()

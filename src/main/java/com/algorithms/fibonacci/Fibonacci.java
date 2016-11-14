@@ -1,4 +1,5 @@
-package org.algorithms;
+package com.algorithms.fibonacci;
+
 /**
  * This program prints out the first 20 numbers in the Fibonacci sequence. Each
  * term is formed by adding together the previous two terms in the sequence,

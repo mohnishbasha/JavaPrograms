@@ -1,4 +1,4 @@
-package org.algorithms;
+package com.algorithms.primenumber;
 
 class PrimeNumberRecursion {
 	private int count = 2;

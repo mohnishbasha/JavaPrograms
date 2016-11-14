@@ -1,4 +1,4 @@
-package org.algorithms;
+package com.algorithms.factorial;
 
 /*************************************************************************
  *  Compilation:  javac Factorial.java

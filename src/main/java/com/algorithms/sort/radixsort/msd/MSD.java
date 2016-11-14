@@ -1,4 +1,4 @@
-package com.algorithms.sort.radixsort;
+package com.algorithms.sort.radixsort.msd;
 
 
 

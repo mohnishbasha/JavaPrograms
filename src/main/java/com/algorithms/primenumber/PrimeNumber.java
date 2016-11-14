@@ -1,4 +1,4 @@
-package org.algorithms;
+package com.algorithms.primenumber;
 
 /*
  This class writes out Prime numbers. A number is prime if it is 

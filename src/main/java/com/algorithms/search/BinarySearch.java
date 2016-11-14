@@ -1,4 +1,4 @@
-package org.algorithms.search;
+package com.algorithms.palindrome;
 
 public class BinarySearch {
 

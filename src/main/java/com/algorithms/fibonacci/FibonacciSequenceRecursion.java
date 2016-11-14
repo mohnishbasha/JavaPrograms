@@ -1,4 +1,4 @@
-package org.algorithms;
+package com.algorithms.fibonacci;
 
 import java.io.*;
 

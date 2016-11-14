@@ -1,4 +1,4 @@
-package org.algorithms;
+package com.algorithms.palindrome;
 
 public class Palindrome1 {
 

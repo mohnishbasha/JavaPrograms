@@ -1,7 +1,4 @@
-package org.algorithms;
-
-
-
+package com.algorithms.fibonacci;
 
 import javax.swing.JOptionPane;
  
