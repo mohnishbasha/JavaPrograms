@@ -18,6 +18,7 @@ Output :
 input int array : [12, 14, 17, 15, 19, 20, -11]
 All pairs in an array of integers whose sum is equal to a given value 9
 (-11, 20)
+
 input int array : [2, 4, 7, 5, 9, 10, -1]
 All pairs in an array of integers whose sum is equal to a given value 9
 (-1, 10)
