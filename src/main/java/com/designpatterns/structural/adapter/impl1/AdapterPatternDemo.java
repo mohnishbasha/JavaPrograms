@@ -1,3 +1,5 @@
+package com.designpatterns.structural.adapter.impl1;
+
 /**
  * Step 5: Use the AudioPlayer to play different types of audio formats.
  * http://www.tutorialspoint.com/design_pattern/adapter_pattern.htm

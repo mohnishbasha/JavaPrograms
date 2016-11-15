@@ -1,4 +1,4 @@
-package org.algorithms.sort;
+package com.algorithms.sort;
 
 /**
  *
@@ -45,7 +45,7 @@ class Node {
 public class BinaryTreeSort {
     public Node root;
 
-    public BST(Object x) { // ONLY CONSTRUCTOR//
+    public BinaryTreeSort(Object x) { // ONLY CONSTRUCTOR//
         root = new Node(x);
     }
 
@@ -86,21 +86,23 @@ public class BinaryTreeSort {
             descOrder(node.left);
         }
     }
-}
 
 
-//MAIN METHOD//
-public static void main(String args[]) {
+    //MAIN METHOD//
+    public static void main(String args[]) {
 
-    // THE SOURCE OF ELEMENTS TO SORT//
-    int[] arr = { 10, 9, 2, 3, 4, 5, 9, 12, 8, 18, 13, 16 };
-    BST bst = new BST(new Integer(arr[0]));
-    for (int i = 1; i < arr.length; i++) {
-        bst.insert(bst.root, new Integer(arr[i]));
+        // THE SOURCE OF ELEMENTS TO SORT//
+        int[] arr = { 10, 9, 2, 3, 4, 5, 9, 12, 8, 18, 13, 16 };
+        BinaryTreeSort bst = new BinaryTreeSort(new Integer(arr[0]));
+        for (int i = 1; i < arr.length; i++) {
+            bst.insert(bst.root, new Integer(arr[i]));
+        }
+        System.out.print("Elements in Increasing Order: ");
+        bst.inOrder(bst.root);
+        System.out.println();
+        System.out.print("Elements in Decreasing Order: ");
+        bst.descOrder(bst.root);
     }
-    System.out.print("Elements in Increasing Order: ");
-    bst.inOrder(bst.root);
-    System.out.println();
-    System.out.print("Elements in Decreasing Order: ");
-    bst.descOrder(bst.root);
 }
+
+

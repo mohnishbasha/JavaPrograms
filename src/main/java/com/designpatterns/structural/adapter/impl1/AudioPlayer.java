@@ -1,3 +1,5 @@
+package com.designpatterns.structural.adapter.impl1;
+
 /**
  * Step 4: Create concrete class implementing the MediaPlayer interface.
  */
@@ -5,7 +7,6 @@
 public class AudioPlayer implements MediaPlayer {
     MediaAdapter mediaAdapter;
 
-    @Override
     public void play(String audioType, String fileName) {
 
         //inbuilt support to play mp3 music files

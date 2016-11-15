@@ -1,26 +1,28 @@
-public interface Shape{
-    public static void draw();
+package com.designpatterns.behavioral.observer.impl1;
+
+interface Shape{
+    public void draw();
 }
 
-public class Circle implements Shape{
+class Circle implements Shape{
     public void draw(){
         System.out.println(" inside Circle object ");
     }
 }
 
-public class Rectangle implements Shape{
+class Rectangle implements Shape{
     public void draw(){
         System.out.println(" inside Rectangle object ");
     }
 }
 
-public class Polygon implements Shape{
+class Polygon implements Shape{
     public void draw(){
         System.out.println(" inside Polygon object ");
     }
 }
 
-public class ShapeFactory extends AbstractFactory {
+class ShapeFactory extends AbstractFactory {
 
     public Shape getShape(String shape){
         if(shape.equals("Circle"))
@@ -31,32 +33,36 @@ public class ShapeFactory extends AbstractFactory {
             return new Polygon();
         return null;
     }
+
+    public Color getColor(String color) {
+        return null;
+    }
 }
 
 
-public interface Color{
+interface Color{
     public void fill();
 }
 
-public class Red implements Color{
+class Red implements Color{
     public void fill(){
         System.out.println(" inside color red object ");
     }
 }
 
-public class Green implements Color{
+class Green implements Color{
     public void fill(){
         System.out.println(" inside color gren object ");
     }
 }
 
-public class Blue implements Color{
+class Blue implements Color{
     public void fill(){
         System.out.println(" inside color blue object ");
     }
 }
 
-public class ColorFactory extends AbstractFactory {
+class ColorFactory extends AbstractFactory {
 
     public Color getColor(String color){
         if(color.equals("Red"))
@@ -67,17 +73,21 @@ public class ColorFactory extends AbstractFactory {
             return new Blue();
         return null;
     }
-    
-    public Color getColor()
+
+    public Shape getShape(String shape) {
+        return null;
+    }
+
+
 }
 
-public abstract class AbstractFactory{
-    public Shape getShape(String shape);
-    public Color getColor(String color);
+abstract class AbstractFactory{
+    public abstract Shape getShape(String shape);
+    public abstract Color getColor(String color);
 }
 
 
-public class FactoryProducer {
+class FactoryProducer {
    public static AbstractFactory getFactory(String choice){
    
       if(choice.equalsIgnoreCase("SHAPE")){
@@ -136,87 +146,5 @@ class AbstractFactoryDemo{
       //call fill method of Color Blue
       color3.fill();
         
-    }
-}
-
-
-///////////////////////////////////
-
-
-
-public interface Observer{
-    private subject;
-    public void update();
-}
-
-
-public class Subject{
-    private List<Observer> observers = new ArrayList<Observer>();
-    private int state;
-    
-    public int getState(){
-        return state;
-    }
-    
-    public void setState(int state){
-        this.state = state;
-        notifyAll();
-    }
-    
-    public void attach(Observer o){
-        observers.add(o);
-    }
-    
-    private void notifyAll(){
-        for(Observer observer: observers){
-            observer.update();
-        }
-    }
-}
-
-public class HexaObject implements Observer{
-    public HexaObject(Subject subject){
-        this.subject = subject;
-        this.subject.attach(this);
-    }
-    
-    public void update(){
-        System.out.println(" Hexa observer value"+ Integer.toHexString(subject.getState()));
-    }
-}
-
-public class OctalObject implements Observer{
-    public OctalObject(Subject subject){
-        this.subject = subject;
-        this.subject.attach(this);
-    }
-    
-    public void update(){
-        System.out.println(" Octal observer value"+ Integer.toOctalString(subject.getState()));
-    }
-}
-
-public class BinaryObject implements Observer{
-    public BinaryObject(Subject subject){
-        this.subject = subject;
-        this.subject.attach(this);
-    }
-    
-    public void update(){
-        System.out.println(" Binary observer value"+ Integer.toBinaryString(subject.getState()));
-    }
-}
-
-
-class ObserverDemo{
-    public static void main(String[] args){
-        Subject subject = new Subject();
-        
-        new HexaObject(subject);
-        new OctalObject(subject);
-        new BinaryObject(subject);
-        
-        System.out.println("Set state to 5");
-        subject.setState(5);
     }
 }

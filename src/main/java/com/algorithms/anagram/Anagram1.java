@@ -91,6 +91,7 @@ public class Anagram1 {
     public static void main(String args[]) {
         Anagram1 test1 = new Anagram1("Love");
         Anagram1 test2 = new Anagram1("Dogs");
+        Anagram1 test3 = new Anagram1("Zental");
 
 
 

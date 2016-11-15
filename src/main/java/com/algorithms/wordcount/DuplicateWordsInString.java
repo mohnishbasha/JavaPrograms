@@ -1,10 +1,13 @@
-package org.algorithms.wordcount;
+package com.algorithms.wordcount;
+
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  *
  */
 
-public class duplicateWordsInString
+public class DuplicateWordsInString
 {
     public static void duplicateWords(String inputString)
     {

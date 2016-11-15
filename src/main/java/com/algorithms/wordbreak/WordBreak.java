@@ -1,3 +1,4 @@
+package com.algorithms.wordbreak;
 /*
 
 Reading also on:
@@ -57,19 +58,22 @@ A: Assume it's much bigger than the input string,
  */
 
 
+import java.util.Map;
+import java.util.Set;
+
 public class WordBreak {
 
     // FizzBizz Approach
-    public String SegmentString(String input,Set<String>dict) {
-        int len=input.length();
+    public String SegmentString(String input, Set<String> dict) {
+        int len = input.length();
 
-        for(int i=1;i<len;i++){
-            String prefix=input.substring(0,i);
-            if(dict.contains(prefix)){
-                String suffix=input.substring(i,len);
+        for (int i = 1; i < len; i++) {
+            String prefix = input.substring(0, i);
+            if (dict.contains(prefix)) {
+                String suffix = input.substring(i, len);
 
-                if(dict.contains(suffix)){
-                    return prefix+" "+suffix;
+                if (dict.contains(suffix)) {
+                    return prefix + " " + suffix;
                 }
             }
         }
@@ -89,7 +93,7 @@ public class WordBreak {
 
      */
 
-    public String SegmentString(String input, Set<String> dict) {
+    public String SegmentStringR(String input, Set<String> dict) {
 
         if (dict.contains(input))
             return input;
@@ -132,12 +136,12 @@ public class WordBreak {
 
     Map<String, String> memoized;
 
-    public String SegmentString(String input, Set<String> dict) {
+    public String SegmentStringD(String input, Set<String> dict) {
 
         if (dict.contains(input))
             return input;
 
-        if (memoized.containsKey(input) {
+        if (memoized.containsKey(input)) {
             return memoized.get(input);
         }
 
@@ -159,7 +163,8 @@ public class WordBreak {
             memoized.put(input, null);
             return null;
         }
-
+        return null;
+    }
 }
 
 
