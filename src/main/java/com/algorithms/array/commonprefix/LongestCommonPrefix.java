@@ -42,11 +42,12 @@ public class LongestCommonPrefix {
             }
         }
 
-        for(int i=0; i<minLen; i++){
-            for(int j=0; j<strs.length-1; j++){
+        for(int i=0; i < minLen; i++) {
+            for(int j=0; j < strs.length-1; j++) {
+
                 String s1 = strs[j];
                 String s2 = strs[j+1];
-                if(s1.charAt(i)!=s2.charAt(i)){
+                if(s1.charAt(i)!=s2.charAt(i)) {
                     return s1.substring(0, i); // i dont understanding this step -- use C++ code below
                 }
             }
@@ -77,7 +78,7 @@ public class LongestCommonPrefix {
 
     public String findLongPrefix (String [] str)
     {
-        StringBuilder strBuilder = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
 
         char [] firstStr = str[0].toCharArray();
 
@@ -93,13 +94,13 @@ public class LongestCommonPrefix {
             }
 
             if(found) {
-                strBuilder.append(firstStr[i]);
+                sb.append(firstStr[i]);
             } else
                 break;
 
         }
 
-        return strBuilder.toString();
+        return sb.toString();
     }
 
 

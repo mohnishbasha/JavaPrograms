@@ -48,23 +48,23 @@ Finding the permutations with recursion
 
 public class Anagram1 {
 
-    public static char[] charArray;
+    public static char[] array;
 
     public Anagram1(String word) {
-        charArray = word.toCharArray(); // L,O,V,E
-        doAnagram(charArray.length);    // 4
+        array = word.toCharArray(); // L,O,V,E
+        doAnagram(array.length);    // 4
     }
 
     public void changeOrder(int newsize) {
         int j;
-        int pointAt = charArray.length - newsize; // 1
-        char temp = charArray[pointAt];
+        int pointAt = array.length - newsize; // 1
+        char temp = array[pointAt];
 
-        for (j = pointAt + 1; j < charArray.length; j++) {
-            charArray[j - 1] = charArray[j];
+        for (j = pointAt + 1; j < array.length; j++) {
+            array[j - 1] = array[j];
         }
 
-        charArray[j - 1] = temp;
+        array[j - 1] = temp;
 
     }
 
@@ -82,8 +82,8 @@ public class Anagram1 {
     }
 
     public void display() {
-        for (int i = 0; i < charArray.length; i++) {
-            System.out.print(charArray[i]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
         }
         System.out.println();
     }
