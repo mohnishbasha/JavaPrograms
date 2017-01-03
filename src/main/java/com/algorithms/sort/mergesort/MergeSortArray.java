@@ -1,4 +1,4 @@
-package org.algorithms.sort;
+package com.algorithms.sort.mergesort;
 
 /* O(n log n) */
 

@@ -10,8 +10,6 @@ http://www.geeksforgeeks.org/longest-common-prefix-set-1-word-by-word-matching/
 http://www.geeksforgeeks.org/longest-common-prefix-set-4-binary-search/
 
 
-
-
 Problem
 
 Write a function to find the longest common prefix string amongst an array of strings.
@@ -113,11 +111,45 @@ public class LongestCommonPrefix {
         System.out.println("LCP 2: " + lcp.findLongPrefix(arr) );
 
 
+        // This one works
+        String strArr[] = {"geeksforgeeks", "geeks",
+                "geek", "geezer"};
+        System.out.println("LCP 3: " + lcp.commonPrefix(strArr, strArr.length) );
     }
 
 
+    // A Function that returns the longest common prefix
+// from the array of strings
+    public String commonPrefix (String arr[], int n)
+    {
+        String prefix =  arr[0];
 
+        for (int i=1; i<=n-1; i++)
+            prefix = commonPrefixUtil(prefix, arr[i]);
 
+        return prefix;
+    }
+
+    // A Utility Function to find the common prefix between
+    // strings- str1 and str2
+    public String commonPrefixUtil(String str1, String str2)
+    {
+        StringBuilder result = new StringBuilder();
+        int n1 = str1.length(), n2 = str2.length();
+
+        char[] s1 = str1.toCharArray();
+        char [] s2 = str2.toCharArray();
+
+        // Compare str1 and str2
+        for (int i=0, j=0; i<=n1-1&&j<=n2-1; i++,j++)
+        {
+            if (s1[i] != s2[j])
+                break;
+            result.append(s1[i]);
+        }
+
+        return result.toString();
+    }
 }
 
 

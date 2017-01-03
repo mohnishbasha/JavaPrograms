@@ -1,4 +1,4 @@
-package org.algorithms.sort;
+package com.algorithms.sort.quicksort;
 
 public class QuickSortSimpleVersion {
 	  private long[] data;
@@ -23,7 +23,7 @@ public class QuickSortSimpleVersion {
 	  }
 
 	  public void quickSort() {
-	    recQuickSort(0, len - 1);
+		  recQuickSort(0, len - 1);
 	  }
 
 	  public void recQuickSort(int left, int right) {

@@ -1,24 +1,26 @@
-package org.algorithms.sort;
+package com.algorithms.sort.heap;
 
 /*  O(n log n) */
 
 import java.io.IOException;
 
-class MyNode {
-  private int iData; 
+class HeapNode {
 
-  public MyNode(int key) {
-    iData = key;
+  private int key;
+
+  public HeapNode(int key) {
+    this.key = key;
   }
 
   public int getKey() {
-    return iData;
+    return key;
   }
 
 }
 
 public class Heap {
-  private MyNode[] heapArray;
+
+  private HeapNode[] heapArray;
 
   private int maxSize;
 
@@ -27,12 +29,12 @@ public class Heap {
   public Heap(int mx) {
     maxSize = mx;
     currentSize = 0;
-    heapArray = new MyNode[maxSize];
+    heapArray = new HeapNode[maxSize];
   }
 
-  public MyNode remove() 
+  public HeapNode remove()
   { 
-    MyNode root = heapArray[0];
+    HeapNode root = heapArray[0];
     heapArray[0] = heapArray[--currentSize];
     trickleDown(0);
     return root;
@@ -40,11 +42,14 @@ public class Heap {
 
   public void trickleDown(int index) {
     int largerChild;
-    MyNode top = heapArray[index]; 
-    MyNode top1 = heapArray[index];
+
+    HeapNode top = heapArray[index];
+    HeapNode top1 = heapArray[index];
+
     if(top == top1){
     	
     }
+
     while (index < currentSize / 2)
     {
       int leftChild = 2 * index + 1;
@@ -64,10 +69,12 @@ public class Heap {
       heapArray[index] = heapArray[largerChild];
       index = largerChild; 
     }
+
     heapArray[index] = top;
   }
 
   public void displayHeap() {
+
     int nBlanks = 32;
     int itemsPerRow = 1;
     int column = 0;
@@ -100,7 +107,7 @@ public class Heap {
     System.out.println("");
   }
 
-  public void insertAt(int index, MyNode newNode) {
+  public void insertAt(int index, HeapNode newNode) {
     heapArray[index] = newNode;
   }
 
@@ -109,14 +116,15 @@ public class Heap {
   }
 
   public static void main(String[] args) throws IOException {
-    int size, i;
 
+    int size, i;
     size = 100;
+
     Heap theHeap = new Heap(size);
 
     for (i = 0; i < size; i++) {
       int random = (int) (java.lang.Math.random() * 100);
-      MyNode newNode = new MyNode(random);
+      HeapNode newNode = new HeapNode(random);
       theHeap.insertAt(i, newNode);
       theHeap.incrementSize();
     }
@@ -130,7 +138,7 @@ public class Heap {
     theHeap.displayArray();
     theHeap.displayHeap();
     for (i = size - 1; i >= 0; i--) {
-      MyNode biggestNode = theHeap.remove();
+      HeapNode biggestNode = theHeap.remove();
       theHeap.insertAt(i, biggestNode);
     }
     System.out.print("Sorted: ");

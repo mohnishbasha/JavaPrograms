@@ -24,16 +24,15 @@ public class SelectionSort {
 	  }
 
 	  public void selectionSort() {
-	    int out, in, min;
+	    int i, j, min;
 
-	    for (out = 0; out < nElems - 1; out++) // outer loop
+	    for (i = 0; i < nElems - 1; i++)
 	    {
-	      min = out; // minimum
-	      for (in = out + 1; in < nElems; in++)
-	        // inner loop
-	        if (a[in] < a[min]) // if min greater,
-	          min = in; // a new min
-	      swap(out, min); // swap them
+	      min = i; // minimum
+	      for (j = i + 1; j < nElems; j++)
+	        if (a[j] < a[min]) // if min greater,
+	          min = j; // a new min
+	      swap(i, min); // swap them
 	    }
 	  }
 

@@ -32,6 +32,8 @@ Following is Java implementation of the above solution based.
 Time Complexity: Time complexity of finding the longest prefix is O(n) where n is length of the input string.
 Refer this for time complexity of building the Trie.
 
+
+
  */
 
 
@@ -51,7 +53,7 @@ class TrieNode {
         children = new HashMap();
         bIsEnd = false;
     }
-    
+
     public HashMap<Character,TrieNode> getChildren() {   return children;  }
 
     public char getValue()                           {   return value;     }
@@ -64,6 +66,9 @@ class TrieNode {
 
 // Implements the actual Trie
 class Trie {
+
+    private TrieNode root;
+
     // Constructor
     public Trie()   {     root = new TrieNode((char)0);       }
 
@@ -124,18 +129,18 @@ class Trie {
                 if( crawl.isEnd() )
                     prevMatch = level + 1;
             }
-            else  break;
+            else
+                break;
         }
 
         // If the last processed character did not match end of a word,
         // return the previously matching prefix
         if( !crawl.isEnd() )
             return result.substring(0, prevMatch);
-
-        else return result;
+        else
+            return result;
     }
 
-    private TrieNode root;
 }
 
 // Testing class

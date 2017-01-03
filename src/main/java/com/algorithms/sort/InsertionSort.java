@@ -1,4 +1,4 @@
-package org.algorithms.sort;
+package com.algorithms.sort;
 
 /* 0(n^2) */
 
@@ -68,6 +68,23 @@ public class InsertionSort {
 
 	  } */
 
+
+      public static int[] sort(int[] A) {
+
+          for (int i = 1; i < A.length; i++) {
+              int key = A[i];
+              int j = i - 1;
+
+              while( j >= 0 && A[j] > key) {
+                  A[j+1] = A[j];
+                  j--;
+              }
+              A[j+1] = key;
+
+          }
+          return A;
+      }
+
 	  public static void main(String[] args) {
 	    int maxSize = 100; // array size
 	    InsertionSort arr; // reference to array
@@ -89,6 +106,11 @@ public class InsertionSort {
 	    arr.insertionSort();
 
 	    arr.display();
+
+
+       // int[] numbers = {10, 5, 3, 7, 2};
+       //   sort(numbers);
+
 	  }
 }
 

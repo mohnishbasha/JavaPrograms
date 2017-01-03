@@ -15,6 +15,27 @@ or vice-versa.
 
  */
 
+
+    /*
+
+Shallow Copy
+----------------------
+Cloned Object and original object are not 100% disjoint.
+Shallow copy is preferred if an object has only primitive fields.
+Any changes made to cloned object will be reflected in original object or vice versa.
+Default version of clone method creates the shallow copy of an object.
+Shallow copy is fast and also less expensive.
+
+Deep Copy
+----------------------
+Cloned Object and original object are 100% disjoint.
+Any changes made to cloned object will not be reflected in original object or vice versa.
+To create the deep copy of an object, you have to override clone method.
+Deep copy is preferred if an object has references to other objects as fields.
+Deep copy is slow and very expensive.
+
+
+     */
 class Course1 implements Cloneable
 {
     String subject1;
@@ -76,11 +97,11 @@ public class DeepCopyInJava
         }
 
         //Printing the subject3 of 'student1'
-        System.out.println(student1.course.subject3);         //Output : Biology
+        System.out.println("Student 1 - subject3 - " + student1.course.subject3);         //Output : Biology
         //Changing the subject3 of 'student2'
 
         student2.course.subject3 = "Maths";
         //This change will not be reflected in original student 'student1'
-        System.out.println(student1.course.subject3);       //Output : Biology
+        System.out.println("Student 1 - subject3 - " + student1.course.subject3);       //Output : Biology
     }
 }
