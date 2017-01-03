@@ -3,65 +3,65 @@ package com.algorithms.sort.mergesort;
 /* O(n log n) */
 
 public class MergeSortArray {
-	private long[] theArray;
+	private long[] array;
 
-	private int nElems;
+	private int n;
 
 	public MergeSortArray(int max) {
-		theArray = new long[max];
-		nElems = 0;
+		array = new long[max];
+		n = 0;
 	}
 
 	public void insert(long value) {
-		theArray[nElems] = value; // insert it
-		nElems++; // increment size
+		array[n] = value; // insert it
+		n++; // increment size
 	}
 
 	public void display() {
-		for (int j = 0; j < nElems; j++)
-			System.out.print(theArray[j] + " ");
+		for (int j = 0; j < n; j++)
+			System.out.print(array[j] + " ");
 		System.out.println("");
 	}
 
 	public void mergeSort() {
-		long[] workSpace = new long[nElems];
-		recMergeSort(workSpace, 0, nElems - 1);
+		long[] arr = new long[n];
+		recMergeSort(arr, 0, n - 1);
 	}
 
-	private void recMergeSort(long[] workSpace, int lowerBound, int upperBound) {
+	private void recMergeSort(long[] arr, int lowerBound, int upperBound) {
 		if (lowerBound == upperBound) // if range is 1,
 			return; // no use sorting
 		else { // find midpoint
 			int mid = (lowerBound + upperBound) / 2;
 			// sort low half
-			recMergeSort(workSpace, lowerBound, mid);
+			recMergeSort(arr, lowerBound, mid);
 			// sort high half
-			recMergeSort(workSpace, mid + 1, upperBound);
+			recMergeSort(arr, mid + 1, upperBound);
 			// merge them
-			merge(workSpace, lowerBound, mid + 1, upperBound);
+			merge(arr, lowerBound, mid + 1, upperBound);
 		}
 	}
 
-	private void merge(long[] workSpace, int lowPtr, int highPtr, int upperBound) {
+	private void merge(long[] arr, int lowPtr, int highPtr, int upperBound) {
 		int j = 0; // workspace index
 		int lowerBound = lowPtr;
 		int mid = highPtr - 1;
 		int n = upperBound - lowerBound + 1; // # of items
 
 		while (lowPtr <= mid && highPtr <= upperBound)
-			if (theArray[lowPtr] < theArray[highPtr])
-				workSpace[j++] = theArray[lowPtr++];
+			if (array[lowPtr] < array[highPtr])
+				arr[j++] = array[lowPtr++];
 			else
-				workSpace[j++] = theArray[highPtr++];
+				arr[j++] = array[highPtr++];
 
 		while (lowPtr <= mid)
-			workSpace[j++] = theArray[lowPtr++];
+			arr[j++] = array[lowPtr++];
 
 		while (highPtr <= upperBound)
-			workSpace[j++] = theArray[highPtr++];
+			arr[j++] = array[highPtr++];
 
 		for (j = 0; j < n; j++)
-			theArray[lowerBound + j] = workSpace[j];
+			array[lowerBound + j] = arr[j];
 	}
 
 	public static void main(String[] args) {
