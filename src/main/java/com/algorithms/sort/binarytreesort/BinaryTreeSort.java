@@ -1,4 +1,4 @@
-package com.algorithms.sort;
+package com.algorithms.sort.binarytreesort;
 
 /**
  *
