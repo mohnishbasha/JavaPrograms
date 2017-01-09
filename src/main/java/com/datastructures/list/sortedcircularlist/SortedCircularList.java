@@ -1,4 +1,4 @@
-package com.algorithms.datastructures.list.sortedcircularlist;
+package com.datastructures.list.sortedcircularlist;
 
 /*
     https://www.careercup.com/question?id=5750341430673408
