@@ -1,4 +1,4 @@
-package org.designpatterns.creational.factoryPattern;
+package com.designpatterns.creational.factoryPattern.impl1;
 
 class FirstFirst extends Namer { // split first last
 	

@@ -1,4 +1,4 @@
-package org.designpatterns.creational.singleton;
+package com.designpatterns.creational.singleton;
 
 public class SingletonPrintSpooler {
 

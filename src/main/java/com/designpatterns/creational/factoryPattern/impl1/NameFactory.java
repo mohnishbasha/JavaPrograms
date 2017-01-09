@@ -1,4 +1,4 @@
-package org.designpatterns.creational.factoryPattern;
+package com.designpatterns.creational.factoryPattern.impl1;
 
 class NameFactory {
 	// returns an instance of LastFirst or FirstFirst

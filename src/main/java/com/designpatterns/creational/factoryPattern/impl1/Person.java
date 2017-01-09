@@ -1,4 +1,4 @@
-package org.designpatterns.creational.factoryPattern;
+package com.designpatterns.creational.factoryPattern.impl1;
 
 public class Person {
 	// name string

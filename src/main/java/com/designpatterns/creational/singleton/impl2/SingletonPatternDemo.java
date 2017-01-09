@@ -1,3 +1,5 @@
+package com.designpatterns.creational.singleton.impl2;
+
 /**
  * Step 2: Get the only object from the singleton class.
  */

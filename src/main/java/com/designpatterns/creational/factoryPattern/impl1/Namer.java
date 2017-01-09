@@ -1,4 +1,4 @@
-package org.designpatterns.creational.factoryPattern;
+package com.designpatterns.creational.factoryPattern.impl1;
 
 class Namer {
 	// a simple class to take a string apart into two names

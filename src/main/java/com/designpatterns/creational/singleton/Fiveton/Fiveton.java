@@ -1,3 +1,5 @@
+package com.designpatterns.creational.singleton.Fiveton;
+
 public class Fiveton
 {
     private static final Fiveton[] instances = new Fiveton[5];

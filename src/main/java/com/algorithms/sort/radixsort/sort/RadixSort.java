@@ -110,6 +110,7 @@ class RadixSort {
     {
         // Find the maximum number to know number of digits
         int m = getMax(arr, n);
+        System.out.println("Value of m: " + m);
 
         // Do counting sort for every digit. Note that instead
         // of passing digit number, exp is passed. exp is 10^i
@@ -122,7 +123,7 @@ class RadixSort {
     static void print(int arr[], int n)
     {
         for (int i=0; i<n; i++)
-            System.out.print(arr[i]+" ");
+            System.out.println(arr[i]+" ");
     }
 
 

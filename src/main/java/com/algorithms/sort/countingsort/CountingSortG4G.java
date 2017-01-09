@@ -2,6 +2,8 @@ package com.algorithms.sort.countingsort;
 
 /*
 
+https://www.youtube.com/watch?v=TTnvXY82dtM
+
 Counting Sort
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects
  having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in
@@ -49,6 +51,19 @@ Exercise:
 3. Is counting sort stable and online?
 4. Thoughts on parallelizing the counting sort algorithm.
 
+
+
+Input: 9 4 10 8 2 4
+Create Index from 2 to 10
+Index     2 3 4 5 6 7 8 9 10
+Count     1 0 2 0 0 0 1 1 1
+Sum       1 1 3 3 3 3 4 5 6
+Sum       1 1 1 3 3 3 3 4 5 - subs 1 everytime inserted in output
+
+Input Index  1 2 3 4 5 6
+Output       2 4 4 8 9 10
+
+
  */
 
 class CountingSortG4G
@@ -88,6 +103,43 @@ class CountingSortG4G
             arr[i] = output[i];
     }
 
+
+    void intSort(int arr[])
+    {
+        int n = arr.length;
+
+        // The output character array that will have sorted arr
+        int out[] = new int[n];
+
+        // Create a count array to store count of inidividul
+        // characters and initialize count array as 0
+        int count[] = new int[256];
+        for (int i=0; i < 256; ++i)
+            count[i] = 0;
+
+        // store count of each character
+        for (int i=0; i< n; ++i)
+            ++count[arr[i]];
+
+        // Change count[i] so that count[i] now contains actual
+        // position of this character in output array
+        // IMP STEP **
+        for (int i=1; i <= 256 - 1; ++i)
+            count[i] += count[i-1];
+
+        // Build the output int array
+        for (int i = 0; i < n; ++i)
+        {
+            out[count[arr[i]]-1] = arr[i];
+            --count[arr[i]];
+        }
+
+        // Copy the output array to arr, so that arr now
+        // contains sorted characters
+        for (int i = 0; i < n; ++i)
+            arr[i] = out[i];
+    }
+
     // Driver method
     public static void main(String args[])
     {
@@ -98,8 +150,17 @@ class CountingSortG4G
 
         ob.sort(arr);
 
-        System.out.print("Sorted character array is ");
+        System.out.println("Sorted character array is ");
         for (int i=0; i<arr.length; ++i)
             System.out.print(arr[i]);
+
+
+        int intarr[] = {1,2,3,4,5,2,1,3,7,3,5,6,7,4,9,3,4,7};
+
+        ob.intSort(intarr);
+
+        System.out.println("\nSorted int array is ");
+        for (int i=0; i<intarr.length; ++i)
+            System.out.print(intarr[i]);
     }
 }

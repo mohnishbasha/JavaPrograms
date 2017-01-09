@@ -1,3 +1,5 @@
+package com.designpatterns.creational.singleton.impl2;
+
 /**
  * Step 1: Create a Singleton Class.
  */
@@ -18,7 +20,8 @@ public class SingleObject {
         return instance;
     }
 
-    public void showMessage(){
+    public void showMessage()
+    {
         System.out.println("Hello World!");
     }
 }
