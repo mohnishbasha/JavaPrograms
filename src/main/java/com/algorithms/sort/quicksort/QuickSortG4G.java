@@ -56,31 +56,32 @@ class QuickSortG4G
        pivot and all greater elements to right
        of pivot */
 
-    int partition(int arr[], int low, int high)
+    int partition(int arr[], int start, int end)
     {
-        int pivot = arr[high];
-        int i = (low-1); // index of smaller element // set to -1
-        for (int j=low; j<=high-1; j++)
+        int pivot = arr[end];
+        int pIndex = (start - 1); // index of smaller element // set to -1
+
+        for (int i=start; i <= end-1; i++)
         {
             // If current element is smaller than or
             // equal to pivot
-            if (arr[j] <= pivot)
+            if (arr[i] <= pivot)
             {
-                i++;
-
                 // swap arr[i] and arr[j]
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                int temp = arr[pIndex];
+                arr[pIndex] = arr[i];
+                arr[i] = temp;
+
+                pIndex++;
             }
         }
 
         // swap arr[i+1] and arr[high] (or pivot)
-        int temp = arr[i+1];
-        arr[i+1] = arr[high];
-        arr[high] = temp;
+        int temp = arr[pIndex+1];
+        arr[pIndex+1] = arr[end];
+        arr[end] = temp;
 
-        return i+1;
+        return pIndex+1;
     }
 
 
@@ -88,18 +89,18 @@ class QuickSortG4G
       arr[] --> Array to be sorted,
       low  --> Starting index,
       high  --> Ending index */
-    void sort(int arr[], int low, int high)
+    void sort(int arr[], int start, int end)
     {
-        if (low < high)
+        if (start < end)
         {
             /* pi is partitioning index, arr[pi] is
               now at right place */
-            int pi = partition(arr, low, high);
+            int pIndex = partition(arr, start, end);
 
             // Recursively sort elements before
             // partition and after partition
-            sort(arr, low, pi-1);
-            sort(arr, pi+1, high);
+            sort(arr, start, pIndex-1);
+            sort(arr, pIndex+1, end);
         }
     }
 

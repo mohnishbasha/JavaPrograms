@@ -73,7 +73,7 @@ class CountingSortG4G
         int n = arr.length;
 
         // The output character array that will have sorted arr
-        char output[] = new char[n];
+        char out[] = new char[n];
 
         // Create a count array to store count of inidividul
         // characters and initialize count array as 0
@@ -93,14 +93,14 @@ class CountingSortG4G
         // Build the output character array
         for (int i = 0; i<n; ++i)
         {
-            output[count[arr[i]]-1] = arr[i];
+            out[count[arr[i]]-1] = arr[i];
             --count[arr[i]];
         }
 
         // Copy the output array to arr, so that arr now
         // contains sorted characters
         for (int i = 0; i<n; ++i)
-            arr[i] = output[i];
+            arr[i] = out[i];
     }
 
 

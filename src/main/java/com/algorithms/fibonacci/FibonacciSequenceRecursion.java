@@ -2,7 +2,7 @@ package com.algorithms.fibonacci;
 
 import java.io.*;
 
-public class FibonacciSequenceRecursion {
+public class 		FibonacciSequenceRecursion {
 
 	public static void main(String[] args) {
 		new FibonacciSequenceRecursion();

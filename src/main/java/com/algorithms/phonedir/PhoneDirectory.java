@@ -1,4 +1,7 @@
+package com.algorithms.phonedir;
+
 /*
+http://www.geeksforgeeks.org/implement-a-phone-directory/
 
 Implement a Phone Directory
 Given a list of contacts which exist in a phone directory. The task is to implement search query for the phone directory.

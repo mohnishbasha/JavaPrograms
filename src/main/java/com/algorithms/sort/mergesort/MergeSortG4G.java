@@ -38,17 +38,18 @@ class MergeSortG4G
     void merge(int arr[], int l, int m, int r)
     {
         // Find sizes of two subarrays to be merged
-        int n1 = m - l + 1;
-        int n2 = r - m;
+        int nL = m - l + 1;
+        int nR = r - m;
 
         /* Create temp arrays */
-        int L[] = new int [n1];
-        int R[] = new int [n2];
+        int L[] = new int [nL];
+        int R[] = new int [nR];
 
         /*Copy data to temp arrays*/
-        for (int i=0; i<n1; ++i)
+        for (int i=0; i < nL; ++i)
             L[i] = arr[l + i];
-        for (int j=0; j<n2; ++j)
+
+        for (int j=0; j < nR; ++j)
             R[j] = arr[m + 1+ j];
 
 
@@ -59,7 +60,8 @@ class MergeSortG4G
 
         // Initial index of merged subarry array
         int k = l;
-        while (i < n1 && j < n2)
+
+        while (i < nL && j < nR)
         {
             if (L[i] <= R[j])
             {
@@ -75,7 +77,7 @@ class MergeSortG4G
         }
 
         /* Copy remaining elements of L[] if any */
-        while (i < n1)
+        while (i < nL)
         {
             arr[k] = L[i];
             i++;
@@ -83,7 +85,7 @@ class MergeSortG4G
         }
 
         /* Copy remaining elements of L[] if any */
-        while (j < n2)
+        while (j < nR)
         {
             arr[k] = R[j];
             j++;

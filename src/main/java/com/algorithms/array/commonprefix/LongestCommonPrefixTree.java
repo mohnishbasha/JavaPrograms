@@ -80,10 +80,10 @@ class Trie {
         TrieNode crawl = root;
 
         // Traverse through all characters of given word
-        for( int level = 0; level < length; level++)
+        for( int i = 0; i < length; i++)
         {
             HashMap<Character,TrieNode> child = crawl.getChildren();
-            char ch = word.charAt(level);
+            char ch = word.charAt(i);
 
             // If there is already a child for current character of given word
             if( child.containsKey(ch))

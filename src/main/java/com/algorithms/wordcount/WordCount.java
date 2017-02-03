@@ -1,4 +1,4 @@
-package org.algorithms.wordcount;
+package com.algorithms.wordcount;
 
 import java.io.*;
 import java.util.*;

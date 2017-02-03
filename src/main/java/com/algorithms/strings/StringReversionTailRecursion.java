@@ -1,14 +1,15 @@
-package org.algorithms.strings;
+package com.algorithms.strings;
 
 public class StringReversionTailRecursion {
-	public String reverse(String str) {
+
+	public String reverse1(String str) {
         if ((null == str) || (str.length()  <= 1)) {
             return str;
         }
         return reverse(str, "");
     }
 
-    private String reverse(String str, String acc) {
+    private static String reverse(String str, String acc) {
       if (str.length() == 0) {
         return acc;
       } else {
@@ -17,7 +18,7 @@ public class StringReversionTailRecursion {
     }
     public static void main(String[] args) {
 	    String str = "What's going on?";
-	    System.out.println(StringReverseXOR.Reverse(str));
+	    System.out.println(StringReversionTailRecursion.reverse(str, ""));
 	  }
 
 }
