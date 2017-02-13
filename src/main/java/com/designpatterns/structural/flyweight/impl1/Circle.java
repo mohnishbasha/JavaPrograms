@@ -1,0 +1,33 @@
+package com.designpatterns.structural.flyweight.impl1;
+
+/*
+Step 2
+Create concrete class implementing the same interface.
+
+ */
+public class Circle implements Shape {
+    private String color;
+    private int x;
+    private int y;
+    private int radius;
+
+    public Circle(String color){
+        this.color = color;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public void draw() {
+        System.out.println("Circle: Draw() [Color : " + color + ", x : " + x + ", y :" + y + ", radius :" + radius);
+    }
+}
