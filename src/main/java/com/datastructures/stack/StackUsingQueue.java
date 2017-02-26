@@ -25,17 +25,19 @@ public class StackUsingQueue {
 
     // Push element x onto stack.
     public void push(int x) {
+
         if(empty()){
             queue1.offer(x);
-        }else{
-            if(queue1.size()>0){
+        } else {
+
+            if(queue1.size()>0) {
                 queue2.offer(x);
                 int size = queue1.size();
                 while(size>0){
                     queue2.offer(queue1.poll());
                     size--;
                 }
-            }else if(queue2.size()>0){
+            } else if (queue2.size()>0) {
                 queue1.offer(x);
                 int size = queue2.size();
                 while(size>0){
@@ -67,6 +69,7 @@ public class StackUsingQueue {
 
     // Return whether the stack is empty.
     public boolean empty() {
+
         return queue1.isEmpty() & queue2.isEmpty();
     }
 }

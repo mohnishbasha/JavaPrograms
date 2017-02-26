@@ -67,7 +67,7 @@ class QuickSortG4G
             // equal to pivot
             if (arr[i] <= pivot)
             {
-                // swap arr[i] and arr[j]
+                // swap arr[i] and arr[pIndex]
                 int temp = arr[pIndex];
                 arr[pIndex] = arr[i];
                 arr[i] = temp;

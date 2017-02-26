@@ -41,7 +41,7 @@ public class ShellSort {
 
 	  public void shellSort() {
 	    int j, i;
-	    long temp;
+	    long key;
 	    //find initial value of h
 	    int h = 1;
 
@@ -52,16 +52,16 @@ public class ShellSort {
 	    {
 	      // h-sort the file
 	      for (i = h; i < len; i++) {
-	        temp = a[i];
+	        key = a[i];
 	        j = i;
 
               // one subpass (eg 0, 4, 8)
-	        while (j > h - 1 && a[j - h] >= temp) {
+	        while (j > h - 1 && a[j - h] >= key) {
 	          a[j] = a[j - h];
 	          j -= h;
 	        }
 
-	        a[j] = temp;
+	        a[j] = key;
 	      }
 
 	      arr.display();

@@ -50,19 +50,21 @@ public class InsertionSort {
 	          insertionsort();
 	      }
 
+		// https://www.youtube.com/watch?v=lCDZ0IprFw4&t=167s
+
 	      private static void insertionsort()
 	      {
-	          int i, j, t;
+	          int i, j, key;
 	          for (i=1; i<n; i++)
 	          {
-	              j=i;
-	              t=a[j];
-	              while (j>0 && a[j-1]>t)
+	              j = i;
+	              key = a[j];
+	              while ( j>0 && a[j-1] > key)
 	              {
 	                  a[j]=a[j-1];
 	                  j--;
 	              }
-	              a[j]=t;
+	              a[j] = key;
 	          }
 	      }
 

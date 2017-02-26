@@ -1,4 +1,4 @@
-package com.datastructures.stackqueue;
+package com.datastructures.problems.stackqueue;
 
 
 /*

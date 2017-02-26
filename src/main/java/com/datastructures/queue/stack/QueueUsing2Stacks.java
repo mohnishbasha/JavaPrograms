@@ -1,4 +1,4 @@
-package com.datastructures.queue;
+package com.datastructures.queue.stack;
 
 /*
 http://www.programcreek.com/2014/07/leetcode-implement-queue-using-stacks-java/

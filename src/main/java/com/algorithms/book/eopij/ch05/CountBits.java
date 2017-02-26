@@ -19,6 +19,10 @@ x>>>1
 
  */
 
+/**
+ * Count Number of bits in a binary representation of a number.
+  */
+
 public class CountBits {
 
     public static short countBits(int x) {

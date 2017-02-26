@@ -17,6 +17,7 @@ example is used. So I just write one and then read the book, and see if I miss a
 
  */
 public class StackUsingArray<E> {
+
     private E[] arr = null;
     private int CAP;
     private int top = -1;
@@ -42,18 +43,18 @@ public class StackUsingArray<E> {
     }
 
     public boolean push(E e) {
-        if (!isFull())
+        if (isFull())
             return false;
 
         this.size++;
         this.arr[++top] = e;
-        return false;
+        return true;
     }
 
     public boolean isFull() {
         if (this.size == this.CAP)
-            return false;
-        return true;
+            return true;
+        return false;
     }
 
     public String toString() {
