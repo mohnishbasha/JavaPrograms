@@ -1,3 +1,5 @@
+package com.designpatterns.behavioral.observer.impl2;
+
 /**
  * Create Observer class.
  */

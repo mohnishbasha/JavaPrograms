@@ -1,3 +1,5 @@
+package com.designpatterns.behavioral.nullobject;
+
 public class NullCustomer extends AbstractCustomer {
 
     @Override

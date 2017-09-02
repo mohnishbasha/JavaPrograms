@@ -11,7 +11,7 @@ public class MultiplyNumbers implements Chain {
 
     public void calculate(Numbers request) {
 
-        if(request.getCalculationWanted() == "mul") {
+        if(request.getCalculationType() == "mul") {
             System.out.println(request.getNumber1() + " * " + request.getNumber2() + " = " +
                     (request.getNumber1() * request.getNumber2()));
         } else {

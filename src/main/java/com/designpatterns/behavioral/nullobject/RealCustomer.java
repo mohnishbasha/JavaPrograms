@@ -1,3 +1,5 @@
+package com.designpatterns.behavioral.nullobject;
+
 public class RealCustomer extends AbstractCustomer {
 
     public RealCustomer(String name) {

@@ -1,6 +1,8 @@
 /**
  * Create concrete observer classes
  */
+package com.designpatterns.behavioral.observer.impl2;
+
 
 public class BinaryObserver extends Observer{
 

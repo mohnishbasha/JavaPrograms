@@ -1,3 +1,5 @@
+package com.designpatterns.behavioral.nullobject;
+
 public class CustomerFactory {
 
     public static final String[] names = {"Rob", "Joe", "Julie"};

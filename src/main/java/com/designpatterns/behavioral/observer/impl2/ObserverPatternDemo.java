@@ -1,3 +1,5 @@
+package com.designpatterns.behavioral.observer.impl2;
+
 /**
  * Use Subject and concrete observer objects.
  * http://www.tutorialspoint.com/design_pattern/observer_pattern.htm

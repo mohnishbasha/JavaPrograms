@@ -1,3 +1,5 @@
+package com.designpatterns.behavioral.observer.impl2;
+
 public class OctalObserver extends Observer{
 
     public OctalObserver(Subject subject){

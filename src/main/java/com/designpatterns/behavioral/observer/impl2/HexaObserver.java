@@ -1,3 +1,6 @@
+package com.designpatterns.behavioral.observer.impl2;
+
+
 public class HexaObserver extends Observer{
 
     public HexaObserver(Subject subject){
