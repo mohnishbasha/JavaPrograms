@@ -2,7 +2,7 @@ package com.designpatterns.behavioral.chainofresponsibility.impl2;
 
 /*
 https://www.tutorialspoint.com/design_pattern/chain_of_responsibility_pattern.htm
-
+http://www.geeksforgeeks.org/chain-responsibility-design-pattern/
 
 https://www.youtube.com/watch?v=jDX6x8qmjbA
 

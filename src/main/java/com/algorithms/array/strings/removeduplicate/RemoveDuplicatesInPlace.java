@@ -1,4 +1,4 @@
-package com.algorithms.array.removeduplicate;
+package com.algorithms.array.strings.removeduplicate;
 
 /*
 Telephonic: ServiceNow
