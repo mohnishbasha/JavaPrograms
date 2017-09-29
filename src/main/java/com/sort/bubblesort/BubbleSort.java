@@ -1,4 +1,4 @@
-package com.sort;
+package com.sort.bubblesort;
 
 /* 0(n^2) */
 

@@ -38,19 +38,19 @@ package com.algorithms.array.majority;
 
 class MajorityLinear {
 
-    static boolean isMajority(int arr[], int n, int x)
+    static boolean isMajority(int a[], int n, int x)
     {
         int i, last_index = 0;
 
         /* get last index according to n (even or odd) */
         last_index = (n % 2 == 0) ? n/2 : n/2+1;
 
-        /* search for first occurrence of x in arr[]*/
+        /* search for first occurrence of x in a[]*/
         for (i = 0; i < last_index; i++)
         {
             /* check if x is present and is present more
                than n/2 times */
-            if (arr[i] == x && arr[i+n/2] == x)
+            if (a[i] == x && a[i+n/2] == x)
                 return true;
         }
         return false;

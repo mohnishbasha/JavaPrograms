@@ -50,14 +50,14 @@ public class DecimalPalindrome {
             return false;
         }
 
-        final int numDigits = (int)(Math.floor(Math.log10(x))) + 1;
-        int msdMask = (int)Math.pow(10, numDigits - 1);
+        final int ndigits  = (int)(Math.floor(Math.log10(x))) + 1;
+        int msdMask = (int)Math.pow(10, ndigits - 1);
 
-        System.out.println("numDigits: " + numDigits);
+        System.out.println("ndigits: " + ndigits);
         System.out.println("msdMask: " + msdMask);
 
 
-        for( int i = 0; i < (numDigits/2); ++i)
+        for( int i = 0; i < (ndigits/2); ++i)
         {
             if(x / msdMask != x%10) {
                 return false;

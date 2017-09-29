@@ -1,7 +1,7 @@
 package com.algorithms.shiftoperators;
 
 /**
- * Created by i835811 on 11/11/16.
+ * Created by  on 11/11/16.
  *
  * Reference:
  * https://www.youtube.com/watch?v=ruWWIBV560U

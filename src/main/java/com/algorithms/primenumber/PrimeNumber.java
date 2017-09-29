@@ -7,12 +7,12 @@ package com.algorithms.primenumber;
 
 public class PrimeNumber {
 	// This method tests whether a given number is prime or not.
-	public static boolean isPrime(int num) {
+	public static boolean isPrime(int n) {
 		boolean prime = true;
-		int limit = (int) Math.sqrt(num);
+		int limit = (int) Math.sqrt(n);
 
 		for (int i = 2; i <= limit; i++) {
-			if (num % i == 0) {
+			if (n % i == 0) {
 				prime = false;
 				break;
 			}

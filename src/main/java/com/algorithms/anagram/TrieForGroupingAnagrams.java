@@ -64,14 +64,14 @@ public class TrieForGroupingAnagrams {
     class TrieNode
     {
 
-        ArrayList<Integer> anagramIndices;
+        ArrayList<Integer> indexes;
 
         TrieNode[] children;
 
         TrieNode()
         {
             children = new TrieNode[ALPHABET_SIZE];
-            this.anagramIndices = new ArrayList();
+            this.indexes = new ArrayList();
         }
     }
 
@@ -119,8 +119,8 @@ public class TrieForGroupingAnagrams {
 
         if (cIndex == key.length())
         {
-            currentNode.anagramIndices.add(cIndex);
-            anagramNodes.put(currentNode, currentNode.anagramIndices);
+            currentNode.indexes.add(cIndex);
+            anagramNodes.put(currentNode, currentNode.indexes);
         }
 
         return;

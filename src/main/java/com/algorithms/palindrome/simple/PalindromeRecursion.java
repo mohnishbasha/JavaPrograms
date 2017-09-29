@@ -3,9 +3,10 @@ package com.algorithms.palindrome.simple;
 
 public class PalindromeRecursion
 {
-    public PalindromeRecursion()
+        public PalindromeRecursion()
         {
         }
+
         public boolean isPalindrome(String s)
         {
                 if (s.length() <= 1)

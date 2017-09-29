@@ -40,7 +40,7 @@ Method 3(Use Sorting)
 Time complexity: O(nlogn)
 
 
-Method 4 (Use Max Heap)
+Method 4 (Use Max Heap) - for Kth Largest
 ----------------------------------------------------------
 1) Build a Max Heap tree in O(n)
 2) Use Extract Max k times to get k maximum elements from the Max Heap O(klogn)

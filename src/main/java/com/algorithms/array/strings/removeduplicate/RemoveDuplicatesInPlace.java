@@ -15,22 +15,6 @@ public class RemoveDuplicatesInPlace {
 
 
 
-    public int removeDuplicatesInPlace(int[] A) {
-        int length=A.length;
-        if(length==0 || length==1) return length;
-        int i=1;
-        for(int j=1; j<length; j++)
-        {
-            if(A[j]!=A[j-1])
-            {
-                A[i]=A[j];
-                i++;
-            }
-        }
-        if(i<length) A[i]='\0';
-        return i;
-    }
-
     // Function to remove duplicate elements
     // This function returns new size of modified
     // array.
@@ -68,7 +52,31 @@ public class RemoveDuplicatesInPlace {
             Time Complexity : O(n)
             Auxiliary Space : O(1)
      */
-    static int removeDuplicatesInPlace1(int arr[], int n)
+
+    public static int removeDuplicatesInPlace(int[] A) {
+        int n = A.length;
+
+        if(n==0 || n==1)
+            return n;
+
+        int i=1;
+        for(int j=1; j<n; j++)
+        {
+            if(A[j]!=A[j-1])
+            {
+                A[i]=A[j];
+                i++;
+            }
+        }
+
+        if(i<n)
+            A[i]='\0';
+
+        return i;
+    }
+
+
+    public static int removeDuplicatesInPlace1(int a[], int n)
     {
         if (n==0 || n==1)
             return n;
@@ -79,10 +87,12 @@ public class RemoveDuplicatesInPlace {
         // Doing same as done in Method 1
         // Just maintaining another updated index i.e. j
         for (int i=0; i < n-1; i++)
-            if (arr[i] != arr[i+1])
-                arr[j++] = arr[i];
+            if (a[i] != a[i+1]) {
+                a[j] = a[i];
+                j++;
+            }
 
-        arr[j++] = arr[n-1];
+        a[j++] = a[n-1];
 
         return j;
     }
@@ -96,13 +106,14 @@ public class RemoveDuplicatesInPlace {
             Time Complexity : O(n)
             Auxiliary Space : O(n)
      */
-    static int removeDuplicates(int arr[], int n)
+    public static int removeDuplicates(int arr[], int n)
     {
         // Return, if array is empty
         // or contains a single element
         if (n==0 || n==1)
             return n;
 
+        // extra space complexity of O(n)
         int[] temp = new int[n];
 
         // Start traversing elements
@@ -120,11 +131,12 @@ public class RemoveDuplicatesInPlace {
         temp[j++] = arr[n-1];
 
         // Modify original array
-        for (int i=0; i<j; i++)
+        for (int i=0; i<j; i++) {
             arr[i] = temp[i];
+            System.out.println(arr[i]);
+        }
 
         return j;
     }
-
 
 }

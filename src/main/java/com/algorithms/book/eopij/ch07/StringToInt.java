@@ -35,12 +35,12 @@ public class StringToInt {
     }
 
     public static int stringToInt(String s) {
-        int result = 0;
+        int res  = 0;
         for (int i = s.charAt(0) == '-' ? 1:0; i < s.length(); ++i) {
             final int digit = s.charAt(i) - '0';
-            result = result * 10 + digit;
+            res = res * 10 + digit;
         }
-        return s.charAt(0) == '-'? -result: result;
+        return s.charAt(0) == '-'? -res: res;
     }
 
 }

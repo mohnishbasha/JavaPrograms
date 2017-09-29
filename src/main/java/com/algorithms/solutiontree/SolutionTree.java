@@ -92,14 +92,14 @@ class SolutionTree {
     }
 
     public static void traverseTree(Node node, List<String> list){
-        if(null == node){
+        if(node == null){
             return;
         }
-        if(null != node.value){
+        if(node.value != null){
             list.add(node.value);
         }
 
-        if(null == node.left && null == node.right){
+        if(node.left == null && node.right == null){
             //reached leaf node, path completed from root to leaf
             //showPath(list); // this can be printed or saved in another arraylist
             System.out.println("Possible Path: " + showPath(list));

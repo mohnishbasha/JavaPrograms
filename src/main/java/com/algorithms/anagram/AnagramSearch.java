@@ -6,6 +6,11 @@ import java.util.HashMap;
 Reference:
 http://www.geeksforgeeks.org/pattern-searching-using-trie-suffixes/
 
+IDeserve:
+https://www.youtube.com/watch?v=h4MCwdfZZas
+
+Anagram: Any permutation of a string
+
  */
 
 public class AnagramSearch {
@@ -18,6 +23,7 @@ public class AnagramSearch {
             {
                 if(textHash.get(key) != patternHash.get(key))
                     return false;
+                // else returns true
             }
             else return false;
         }
@@ -57,8 +63,8 @@ public class AnagramSearch {
         }
 
 
-        int windowStart = 0;
-        int windowEnd = pattern.length()-1;
+        int start = 0;
+        int end = pattern.length()-1;
 
         while(true)
         {
@@ -66,13 +72,13 @@ public class AnagramSearch {
             {
                 return true;
             }
-            windowStart++;
-            windowEnd++;
-            if(windowEnd >= text.length())
+            start++;
+            end++;
+            if(end >= text.length())
                 return false;
 
-
-            int txtCh = (int)text.charAt(windowStart -1);
+            // remove the char at beginning
+            int txtCh = (int)text.charAt(start -1);
             if(textHash.containsKey(txtCh))
             {
                 int count = textHash.get(txtCh);
@@ -82,7 +88,8 @@ public class AnagramSearch {
                     textHash.put(txtCh, count-1);
             }
 
-            txtCh = (int)text.charAt(windowEnd);
+            // insert the char at the end
+            txtCh = (int)text.charAt(end);
             if(!textHash.containsKey(txtCh))
             {
                 textHash.put(txtCh, 1);

@@ -10,14 +10,15 @@ package com.algorithms.book.eopij.ch05;
 public class ReverseDigits {
 
     public static long reverse(int x) {
-        long result = 0;
-        long xx = Math.abs(x);
+        long res = 0;
+        long n = Math.abs(x);
 
-        while( xx != 0) {
-            result = result * 10 +  xx %10;
-            xx /= 10;
+        while( n != 0) {
+            long remainder = n % 10;
+            res = res * 10 +  remainder;
+            n /= 10;
         }
-        return  x < 0? -result: result;
+        return  x < 0? -res: res;
     }
 
     public static void main (String args[]) {

@@ -70,10 +70,11 @@ public class Anagram1 {
 
     public void changeOrder(int newsize) {
         int j;
-        int pointAt = arr.length - newsize; // 1
-        char temp = arr[pointAt];
 
-        for (j = pointAt + 1; j < arr.length; j++) {
+        int index = arr.length - newsize; // 1
+        char temp = arr[index];
+
+        for (j = index + 1; j < arr.length; j++) {
             arr[j - 1] = arr[j];
         }
         arr[j - 1] = temp;

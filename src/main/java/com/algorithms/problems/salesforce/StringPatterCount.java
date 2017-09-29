@@ -12,10 +12,14 @@ public class StringPatterCount {
 
 
     public static void stringPattern(String str) {
+
         char[] letters = str.toLowerCase().toCharArray();
+
         int counter =1;
         StringBuilder sb = new StringBuilder();
+
         System.out.println("Print length:"+letters.length);
+
         for(int i=0;i<letters.length;i++){
             if(letters.length == i+1){
                 sb.append(letters[i]).append(counter);

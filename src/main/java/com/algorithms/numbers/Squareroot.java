@@ -30,7 +30,7 @@ public class Squareroot
             return x;
 
         // Do Binary Search for floor(sqrt(x))
-        int start = 1, end = x, ans=0;
+        int start = 1, end = x, res = 0;
 
         while (start <= end)
         {
@@ -45,12 +45,12 @@ public class Squareroot
             if (mid*mid < x)
             {
                 start = mid + 1;
-                ans = mid;
+                res = mid;
             }
             else   // If mid*mid is greater than x
                 end = mid - 1;
         }
-        return ans;
+        return res;
     }
 
     // Driver Method

@@ -88,15 +88,18 @@ public class NumberOfOccuranceOfn {
     public static int findOccurances(int[] arr, int num) {
         int len = arr.length -1;
 
-        int start = find(arr, 0, len , num, true);
-        int end   =  find(arr, 0, len, num, false);
+        int start =  find(arr, num, true);
+        int end   =  find(arr, num, false);
 
         return end - start + 1;
     }
 
-    public static int find(int[] arr, int start, int last, int num, boolean first) {
+    public static int find(int[] arr, int num, boolean first) {
         int mid;
-        int foundAt = -1;
+        int pos = -1;
+
+        int start = 0;
+        int last = arr.length - 1;
 
         while (start <= last) {
             mid = (last + start) / 2;
@@ -108,14 +111,14 @@ public class NumberOfOccuranceOfn {
             }
             //when found number, now we need to find the first occurrence of that repeated number
             else {
-                foundAt = mid;
+                pos = mid;
                 if (first)
                     last = mid - 1;
                 else
                     start = mid + 1;
             }
         }
-        return foundAt;
+        return pos;
     }
 
     public static void main(String[] args) {

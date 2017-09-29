@@ -27,12 +27,12 @@ public class CountBits {
 
     public static short countBits(int x) {
 
-        short numBits = 0;
+        short nbits = 0;
         while ( x != 0) {
-            numBits += (x & 1);
+            nbits += (x & 1);
             x >>>= 1;
         }
-        return numBits;
+        return nbits;
     }
 
     public static void main (String args[]) {

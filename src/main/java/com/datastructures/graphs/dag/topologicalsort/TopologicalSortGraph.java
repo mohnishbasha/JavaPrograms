@@ -20,7 +20,7 @@ import java.util.*;
 
 // This class represents a directed graph using adjacency
 // list representation
-class TopologicalSortGraph
+class  TopologicalSortGraph
 {
     private int V;   // No. of vertices
     private LinkedList<Integer> adj[]; // Adjacency List

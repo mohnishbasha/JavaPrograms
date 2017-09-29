@@ -11,7 +11,8 @@ We recommend to read following post as a prerequisite of this post.
 
 K’th Smallest/Largest Element in Unsorted Array | Set 1
 
-Given an array and a number k where k is smaller than size of array, we need to find the k’th smallest element in the given array. It is given that ll array elements are distinct.
+Given an array and a number k where k is smaller than size of array, we need to find the k’th smallest element in the
+ given array. It is given that ll array elements are distinct.
 
 Examples:
 
@@ -76,19 +77,20 @@ class KthSmallest
     // the last element as pivot and moves all smaller element
     // to left of it and greater elements to right. This function
     // is used by randomPartition()
-    int partition(int arr[], int l, int r)
+    int partition(int arr[], int start, int end)
     {
-        int x = arr[r], i = l;
-        for (int j = l; j <= r - 1; j++)
+        int pivot = arr[end];
+        int pIndex = start;
+        for (int j = start; j <= end - 1; j++)
         {
-            if (arr[j] <= x)
+            if (arr[j] <= pivot)
             {
-                swap(arr, i, j);
-                i++;
+                swap(arr, pIndex, j);
+                pIndex++;
             }
         }
-        swap(arr, i, r);
-        return i;
+        swap(arr, pIndex, end);
+        return pIndex;
     }
 
     // Picks a random pivot element between l and r and

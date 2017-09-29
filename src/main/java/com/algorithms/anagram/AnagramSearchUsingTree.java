@@ -6,6 +6,10 @@ import java.util.List;
 /*
 http://www.geeksforgeeks.org/pattern-searching-using-trie-suffixes/
 
+
+https://www.youtube.com/watch?v=-rcfE1Tj2E0
+
+
  */
 
 public class AnagramSearchUsingTree {
