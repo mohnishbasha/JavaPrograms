@@ -1,4 +1,4 @@
-package com.design.playingcards.simple;
+package org.design.g4g.playingcards.simple;
 
 
 /**

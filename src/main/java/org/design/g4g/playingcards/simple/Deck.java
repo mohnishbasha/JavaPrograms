@@ -1,4 +1,4 @@
-package com.design.playingcards.simple;
+package org.design.g4g.playingcards.simple;
 
 /**
  * http://www.nobigo.com/design-a-deck-of-playing-cards-deck-shuffling

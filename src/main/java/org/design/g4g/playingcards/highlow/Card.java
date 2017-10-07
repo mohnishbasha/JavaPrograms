@@ -1,4 +1,4 @@
-package com.design.playingcards.highlow;
+package org.design.g4g.playingcards.highlow;
 
 /**
  * http://math.hws.edu/javanotes/c5/s4.html

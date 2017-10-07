@@ -1,4 +1,4 @@
-package com.design.playingcards.highlow;
+package org.design.g4g.playingcards.highlow;
 
 /**
  *  An object of type Deck represents a deck of playing cards.  The deck

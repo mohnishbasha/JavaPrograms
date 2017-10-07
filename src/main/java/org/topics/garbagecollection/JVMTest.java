@@ -1,0 +1,84 @@
+package org.topics.garbagecollection;
+
+/*
+http://www.geeksforgeeks.org/jvm-works-jvm-architecture/
+http://www.geeksforgeeks.org/island-of-isolation-in-java/
+http://www.geeksforgeeks.org/how-to-make-object-eligible-for-garbage-collection/
+https://dzone.com/articles/java-garbage-collection-best-practices-tutorials-and-more
+https://stackify.com/what-is-java-garbage-collection/
+
+Class Loader:
+http://javarevisited.blogspot.in/2012/12/how-classloader-works-in-java.html
+
+ */
+
+
+// A Java program to demonstrate working of a Class type
+// object created by JVM to represent .class file in
+// memory.
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+// Java code to demonstrate use of Class object
+// created by JVM
+public class JVMTest
+{
+    public static void main(String[] args)
+    {
+        Student s1 = new Student();
+
+        // Getting hold of Class object created
+        // by JVM.
+        Class c1 = s1.getClass();
+
+        // Printing type of object using c1.
+        System.out.println(c1.getName());
+
+        // getting all methods in an array
+        Method m[] = c1.getDeclaredMethods();
+        for (Method method : m)
+            System.out.println(method.getName());
+
+        // getting all fields in an array
+        Field f[] = c1.getDeclaredFields();
+        for (Field field : f)
+            System.out.println(field.getName());
+    }
+}
+
+// A sample class whose information is fetched above using
+// its Class object.
+class Student
+{
+    private String name;
+    private int roll_No;
+
+    public String getName()  {  return name;   }
+    public void setName(String name) { this.name = name; }
+    public int getRoll_no()  { return roll_No;  }
+    public void setRoll_no(int roll_no) {
+        this.roll_No = roll_no;
+    }
+}
+
+/*
+Output:
+
+Student
+getName
+setName
+getRoll_no
+setRoll_no
+name
+roll_No
+
+
+Note : For every loaded .class file, only one object of Class is created.
+
+Student s2 = new Student();
+// c2 will point to same object where
+// c1 is pointing
+Class c2 = s2.getClass();
+System.out.println(c1==c2); // true
+
+ */
