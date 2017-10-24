@@ -12,7 +12,7 @@ http://algs4.cs.princeton.edu/13stacks/LinkedStack.java.html
  *  Data files:   http://algs4.cs.princeton.edu/13stacks/tobe.txt
  *
  *  A generic stack, implemented using a linked list. Each stack
- *  element is of type Item.
+ *  data is of type Item.
  *
  *  % more tobe.txt
  *  to be or not to - be - - that - - - is

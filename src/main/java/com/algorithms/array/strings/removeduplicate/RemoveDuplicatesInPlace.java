@@ -3,7 +3,7 @@ package com.algorithms.array.strings.removeduplicate;
 /*
 Telephonic: ServiceNow
 
-Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
+Given a sorted array, remove the duplicates in place such that each data appear only once and return the new length.
 Do not allocate extra space for another array, you must do this in place with constant memory. For example, Given input
 array A = [1,1,2], Your function should return length = 2, and A is now [1,2].
 
@@ -81,7 +81,7 @@ public class RemoveDuplicatesInPlace {
         if (n==0 || n==1)
             return n;
 
-        // To store index of next unique element
+        // To store index of next unique data
         int j = 0;
 
         // Doing same as done in Method 1
@@ -109,7 +109,7 @@ public class RemoveDuplicatesInPlace {
     public static int removeDuplicates(int arr[], int n)
     {
         // Return, if array is empty
-        // or contains a single element
+        // or contains a single data
         if (n==0 || n==1)
             return n;
 
@@ -119,13 +119,13 @@ public class RemoveDuplicatesInPlace {
         // Start traversing elements
         int j = 0;
         for (int i=0; i<n-1; i++)
-            // If current element is not equal
-            // to next element then store that
-            // current element
+            // If current data is not equal
+            // to next data then store that
+            // current data
             if (arr[i] != arr[i+1])
                 temp[j++] = arr[i];
 
-        // Store the last element as whether
+        // Store the last data as whether
         // it is unique or repeated, it hasn't
         // stored previously
         temp[j++] = arr[n-1];

@@ -3,7 +3,7 @@ package com.algorithms.array.move;
 /*
 
     // Move non-zero elements once either one cell straight down or one cell diagonally down (down and right).
-    // If the destination cell is occupied (non-zero element), don't move the element.
+    // If the destination cell is occupied (non-zero data), don't move the data.
 
     int mat1[][] =
     {

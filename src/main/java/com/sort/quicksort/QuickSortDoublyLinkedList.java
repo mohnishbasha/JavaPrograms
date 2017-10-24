@@ -16,7 +16,7 @@ It takes O(n^2) time in worst case and O(nLogn) in average and best cases. The w
 list is already sorted.
 
 Can we implement random quick sort for linked list?
-Quicksort can be implemented for Linked List only when we can pick a fixed point as pivot (like last element in above
+Quicksort can be implemented for Linked List only when we can pick a fixed point as pivot (like last data in above
 implementation). Random QuickSort cannot be efficiently implemented for Linked Lists by picking random pivot.
 
 Exercise:
@@ -54,12 +54,12 @@ class QuickSortDoublyLinkedList{
     }
 
 
-    /* Considers last element as pivot, places the pivot element at its
+    /* Considers last data as pivot, places the pivot data at its
        correct position in sorted array, and places all smaller (smaller than
        pivot) to left of pivot and all greater elements to right of pivot */
     Node partition(Node l,Node h)
     {
-        // set pivot as h element
+        // set pivot as h data
         int x = h.data;
 
         // similar to i = l-1 for array implementation

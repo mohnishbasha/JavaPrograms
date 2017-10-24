@@ -17,7 +17,7 @@ Input data: 1, 4, 1, 2, 7, 5, 2
   Index:     0  1  2  3  4  5  6  7  8  9
   Count:     0  2  2  0   1  1  0  1  0  0
 
-  2) Modify the count array such that each element at each index
+  2) Modify the count array such that each data at each index
   stores the sum of previous counts.
   Index:     0  1  2  3  4  5  6  7  8  9
   Count:     0  2  4  4  5  6  6  7  7  7

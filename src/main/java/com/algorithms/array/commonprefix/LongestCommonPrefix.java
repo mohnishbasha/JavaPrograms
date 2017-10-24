@@ -17,7 +17,7 @@ Write a function to find the longest common prefix string amongst an array of st
 Analysis
 `
 To solve this problem, we need to find the two loop conditions. One is the length of the shortest string.
-The other is iteration over every element of the string array.
+The other is iteration over every data of the string array.
 
 
  */
@@ -58,7 +58,7 @@ public class LongestCommonPrefix {
     Simple Algorithm Will Go Like This:
 
     Algorithm: Longest Common Prefix ( LCP)
-    1.Take a String From Array Whose length is Minimum else you might get exception if tries to access array element
+    1.Take a String From Array Whose length is Minimum else you might get exception if tries to access array data
     outside range.why this will work because if there exist a common prefix then it will be the desired answer .
 
     Example like in case of "shash" ,"shank","shashank" LCP will be "sha"

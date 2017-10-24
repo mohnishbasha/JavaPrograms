@@ -14,10 +14,10 @@ class FindTriplet
     {
         int l, r;
 
-        // Fix the first element as A[i]
+        // Fix the first data as A[i]
         for (int i = 0; i < arr_size - 2; i++)
         {
-            // Fix the second element as A[j]
+            // Fix the second data as A[j]
             for (int j = i + 1; j < arr_size - 1; j++)
             {
                 // Now look for the third number

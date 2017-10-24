@@ -2,7 +2,7 @@ package com.algorithms.missingnum;
 
 /*
 
-How to find a missing element between two linked lists in O(n)?
+How to find a missing data between two linked lists in O(n)?
  */
 
 /*
@@ -11,7 +11,7 @@ I have two Singly Linked Lists of Integer. One of them is a subset of another (t
 What is the best way (regarding performance) to find a number which the first list does contain and the second one
 does not?
 
-My thought is first to sort them (using merge sort) and then just compare element by element. So, it takes
+My thought is first to sort them (using merge sort) and then just compare data by data. So, it takes
 O(nlogn+mlogm+n), but a better O(n) soltuion should exist.
 
 Another Question:

@@ -4,7 +4,7 @@ asked in cisco:
 http://www.geeksforgeeks.org/kth-largest-element-in-a-stream/
 
 Problem:
-Given an infinite stream of integers, find the k’th largest element at any point of time.
+Given an infinite stream of integers, find the k’th largest data at any point of time.
 
 Example:
 
@@ -16,30 +16,30 @@ Output:    {_,   _, 10, 11, 20, 40, 50,  50, ...}
 Extra space allowed is O(k).
 
 
-A Simple Solution is to keep an array of size k. The idea is to keep the array sorted so that the k’th largest element
-can be found in O(1) time (we just need to return first element of array if array is sorted in increasing order)
+A Simple Solution is to keep an array of size k. The idea is to keep the array sorted so that the k’th largest data
+can be found in O(1) time (we just need to return first data of array if array is sorted in increasing order)
 
-How to process a new element of stream?
-For every new element in stream, check if the new element is smaller than current k’th largest element. If yes,
-then ignore it. If no, then remove the smallest element from array and insert new element in sorted order.
-Time complexity of processing a new element is O(k).
+How to process a new data of stream?
+For every new data in stream, check if the new data is smaller than current k’th largest data. If yes,
+then ignore it. If no, then remove the smallest data from array and insert new data in sorted order.
+Time complexity of processing a new data is O(k).
 
 
-A Better Solution is to use a Self Balancing Binary Search Tree of size k. The k’th largest element can be
+A Better Solution is to use a Self Balancing Binary Search Tree of size k. The k’th largest data can be
 found in O(Logk) time.
 
-How to process a new element of stream?
-For every new element in stream, check if the new element is smaller than current k’th largest element. If yes, then
-ignore it. If no, then remove the smallest element from the tree and insert new element. Time complexity of processing
-a new element is O(Logk).
+How to process a new data of stream?
+For every new data in stream, check if the new data is smaller than current k’th largest data. If yes, then
+ignore it. If no, then remove the smallest data from the tree and insert new data. Time complexity of processing
+a new data is O(Logk).
 
 
-An Efficient Solution is to use Min Heap of size k to store k largest elements of stream. The k’th largest element is
+An Efficient Solution is to use Min Heap of size k to store k largest elements of stream. The k’th largest data is
 always at root and can be found in O(1) time.
 
-How to process a new element of stream?
-Compare the new element with root of heap. If new element is smaller, then ignore it. Otherwise replace root with new
-element and call heapify for the root of modified heap. Time complexity of finding the k’th largest element is O(Logk).
+How to process a new data of stream?
+Compare the new data with root of heap. If new data is smaller, then ignore it. Otherwise replace root with new
+data and call heapify for the root of modified heap. Time complexity of finding the k’th largest data is O(Logk).
 
 
 
@@ -54,7 +54,7 @@ public class KthSmallestInStream {
 
 /*
 
-// A C++ program to find k'th smallest element in a stream
+// A C++ program to find k'th smallest data in a stream
 #include<iostream>
 #include<climits>
 using namespace std;
@@ -75,7 +75,7 @@ public:
     int parent(int i)  { return (i-1)/2;  }
     int left(int i)    { return (2*i + 1);  }
     int right(int i)   { return (2*i + 2);  }
-    int extractMin();  // extracts root (minimum) element
+    int extractMin();  // extracts root (minimum) data
     int getMin()       {  return harr[0]; }
 
     // to replace root with new node x and heapify() new root
@@ -98,7 +98,7 @@ void MinHeap::buildHeap()
     }
 }
 
-// Method to remove minimum element (or root) from min heap
+// Method to remove minimum data (or root) from min heap
 int MinHeap::extractMin()
 {
     if (heap_size == 0)
@@ -145,11 +145,11 @@ void swap(int *x, int *y)
     *y = temp;
 }
 
-// Function to return k'th largest element from input stream
+// Function to return k'th largest data from input stream
 void kthLargest(int k)
 {
     // count is total no. of elements in stream seen so far
-    int count = 0, x;  // x is for new element
+    int count = 0, x;  // x is for new data
 
     // Create a min heap of size k
     int *arr = new int[k];
@@ -158,8 +158,8 @@ void kthLargest(int k)
 
     while (1)
     {
-        // Take next element from stream
-        cout << "Enter next element of stream ";
+        // Take next data from stream
+        cout << "Enter next data of stream ";
         cin >> x;
 
         // Nothing much to do for first k-1 elements
@@ -171,7 +171,7 @@ void kthLargest(int k)
 
         else
         {
-          // If this is k'th element, then store it
+          // If this is k'th data, then store it
           // and build the heap created above
           if (count == k-1)
           {
@@ -181,15 +181,15 @@ void kthLargest(int k)
 
           else
           {
-               // If next element is greater than
+               // If next data is greater than
                // k'th largest, then replace the root
                if (x > mh.getMin())
                   mh.replaceMin(x); // replaceMin calls
                                     // heapify()
           }
 
-          // Root of heap is k'th largest element
-          cout << "K'th largest element is "
+          // Root of heap is k'th largest data
+          cout << "K'th largest data is "
                << mh.getMin() << endl;
           count++;
         }
@@ -208,19 +208,19 @@ Run on IDE
 Output
 
 K is 3
-Enter next element of stream 23
-Enter next element of stream 10
-Enter next element of stream 15
-K'th largest element is 10
-Enter next element of stream 70
-K'th largest element is 15
-Enter next element of stream 5
-K'th largest element is 15
-Enter next element of stream 80
-K'th largest element is 23
-Enter next element of stream 100
-K'th largest element is 70
-Enter next element of stream
+Enter next data of stream 23
+Enter next data of stream 10
+Enter next data of stream 15
+K'th largest data is 10
+Enter next data of stream 70
+K'th largest data is 15
+Enter next data of stream 5
+K'th largest data is 15
+Enter next data of stream 80
+K'th largest data is 23
+Enter next data of stream 100
+K'th largest data is 70
+Enter next data of stream
 CTRL + C pressed
 
 

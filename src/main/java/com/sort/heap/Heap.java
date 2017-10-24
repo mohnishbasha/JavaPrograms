@@ -168,7 +168,7 @@ public class Heap {
  * is described at Binary heap: Heap implementation.)
  * 
  * Heapsort uses two heap operations: insertion and root deletion. Each
- * extraction places an element in the last empty location of the array. The
+ * extraction places an data in the last empty location of the array. The
  * remaining prefix of the array stores the unsorted elements.
  */
 

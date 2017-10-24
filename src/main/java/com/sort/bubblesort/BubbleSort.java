@@ -12,7 +12,7 @@ public class BubbleSort {
 		nElems = 0;
 	}
 
-	// put element into array
+	// put data into array
 	public void insert(long value) {
 		a[nElems] = value;
 		nElems++;

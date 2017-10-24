@@ -26,7 +26,7 @@ import java.util.LinkedList;
  * less than value at current index.
  * While removing value from stack calculate area
  * if stack is empty
- * it means that till this point value just removed has to be smallest element
+ * it means that till this point value just removed has to be smallest data
  * so area = input[top] * i
  * if stack is not empty then this value at index top is less than or equal to
  * everything from stack top + 1 till i. So area will

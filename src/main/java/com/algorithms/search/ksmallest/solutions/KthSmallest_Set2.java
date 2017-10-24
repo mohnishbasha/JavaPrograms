@@ -4,7 +4,7 @@ package com.algorithms.search.ksmallest.solutions;
 Expected Linear Time
 http://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/
 
- Given an array and a number k where k is smaller than size of array, we need to find the k’th smallest element in the
+ Given an array and a number k where k is smaller than size of array, we need to find the k’th smallest data in the
   given array. It is given that ll array elements are distinct.
 
 Examples:
@@ -19,9 +19,9 @@ Output: 10
 
 
  In this post method 4 is discussed which is mainly an extension of method 3 (QuickSelect) discussed in the previous
-  post. The idea is to randomly pick a pivot element. To implement randomized partition, we use a random function,
-  rand() to generate index between l and r, swap the element at randomly generated index with the last element, and
-  finally call the standard partition process which uses last element as pivot.
+  post. The idea is to randomly pick a pivot data. To implement randomized partition, we use a random function,
+  rand() to generate index between l and r, swap the data at randomly generated index with the last data, and
+  finally call the standard partition process which uses last data as pivot.
 
 Following is implementation of above Randomized QuickSelect.
 
@@ -30,7 +30,7 @@ Following is implementation of above Randomized QuickSelect.
 public class KthSmallest_Set2 {
 
 
-    // This function returns k'th smallest element in arr[l..r]
+    // This function returns k'th smallest data in arr[l..r]
     // using QuickSort based method.  ASSUMPTION: ALL ELEMENTS
     // IN ARR[] ARE DISTINCT
     int KthSmallest_Set2(int arr[], int l, int r, int k)
@@ -38,8 +38,8 @@ public class KthSmallest_Set2 {
         // If k is smaller than number of elements in array
         if (k > 0 && k <= r - l + 1)
         {
-            // Partition the array around a random element and
-            // get position of pivot element in sorted array
+            // Partition the array around a random data and
+            // get position of pivot data in sorted array
             int pos = randomPartition(arr, l, r);
 
             // If position is same as k
@@ -67,7 +67,7 @@ public class KthSmallest_Set2 {
     }
 
     // Standard partition process of QuickSort().  It considers
-    // the last element as pivot and moves all smaller element
+    // the last data as pivot and moves all smaller data
     // to left of it and greater elements to right. This function
     // is used by randomPartition()
     int partition(int arr[], int l, int r)
@@ -85,9 +85,9 @@ public class KthSmallest_Set2 {
         return i;
     }
 
-    // Picks a random pivot element between l and r and
+    // Picks a random pivot data between l and r and
     // partitions arr[l..r] arount the randomly picked
-    // element using partition()
+    // data using partition()
     int randomPartition(int arr[], int l, int r)
     {
         int n = r-l+1;
@@ -102,7 +102,7 @@ public class KthSmallest_Set2 {
         KthSmallest_Set2 ob = new KthSmallest_Set2();
         int arr[] = {12, 3, 5, 7, 4, 19, 26};
         int n = arr.length,k = 3;
-        System.out.println("K'th smallest element is "+
+        System.out.println("K'th smallest data is "+
                 ob.KthSmallest_Set2(arr, 0, n-1, k));
     }
 }

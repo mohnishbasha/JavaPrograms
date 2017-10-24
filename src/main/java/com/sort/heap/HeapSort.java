@@ -12,8 +12,8 @@ package com.sort.heap;
  *
  * Heap Sort
  Heap sort is a comparison based sorting technique based on Binary Heap data structure. It is similar to selection sort
- where we first find the maximum element and place the maximum element at the end. We repeat the same process for
- remaining element.
+ where we first find the maximum data and place the maximum data at the end. We repeat the same process for
+ remaining data.
 
  What is Binary Heap?
  Let us first define a Complete Binary Tree. A complete binary tree is a binary tree in which every level, except
@@ -53,7 +53,7 @@ public class HeapSort
         for (int i = n / 2 - 1; i >= 0; i--)
             heapify(arr, n, i);
 
-        // One by one extract an element from heap
+        // One by one extract an data from heap
         for (int i=n-1; i>=0; i--)
         {
             // Move current root to end

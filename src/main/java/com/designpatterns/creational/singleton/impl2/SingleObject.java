@@ -32,8 +32,8 @@ package com.designpatterns.creational.singleton.impl2;
 
 public class SingleObject {
 
-    //create an object of SingleObject
-    private static volatile SingleObject _instance = new SingleObject();
+    //create an object reference of SingleObject
+    private static volatile SingleObject _instance;
 
     // make the constructor private so that this class cannot be
     // instantiated

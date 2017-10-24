@@ -13,7 +13,7 @@ https://gist.github.com/Vedrana/3675434
  */
 
 
-// Given a stream of unsorted integers, find the median element in sorted order at any given time.
+// Given a stream of unsorted integers, find the median data in sorted order at any given time.
 // http://www.ardendertat.com/2011/11/03/programming-interview-questions-13-median-of-integer-stream/
 public class MedianOfIntegerStream {
 

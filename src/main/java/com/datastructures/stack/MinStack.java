@@ -5,17 +5,17 @@ http://www.programcreek.com/2014/02/leetcode-min-stack-java/
 
 LeetCode – Min Stack (Java)
 
-Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+Design a stack that supports push, pop, top, and retrieving the minimum data in constant time.
 
-push(x) -- Push element x onto stack.
-pop() -- Removes the element on top of the stack.
-top() -- Get the top element.
-getMin() -- Retrieve the minimum element in the stack.
+push(x) -- Push data x onto stack.
+pop() -- Removes the data on top of the stack.
+top() -- Get the top data.
+getMin() -- Retrieve the minimum data in the stack.
 
 Java Solution
 
-To make constant time of getMin(), we need to keep track of the minimum element for each element in the stack.
-Define an element class that holds element value, min value, and pointer to elements below it.
+To make constant time of getMin(), we need to keep track of the minimum data for each data in the stack.
+Define an data class that holds data value, min value, and pointer to elements below it.
 
 
  */

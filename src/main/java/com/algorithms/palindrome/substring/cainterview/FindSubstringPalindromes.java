@@ -1,5 +1,4 @@
-package com.algorithms.palindrome;
-
+package com.algorithms.palindrome.substring.cainterview;
 
 //Part 1: A palindrome is a sequence of characters that is the same backwards or forward.
 //Write a function that tests a string passed in for whether it is a palindrome or not.
@@ -10,8 +9,8 @@ package com.algorithms.palindrome;
 
 // TODO
 
-import java.io.*;
-import java.util.*;
+        import java.io.*;
+        import java.util.*;
 
 class FindSubstringPalindromes
 {

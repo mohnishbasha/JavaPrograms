@@ -23,8 +23,8 @@ package org.design.g4g.playingcards.simple;
  Question 2: how to represent a large sparse matrix? the matrix can be very large... like 1000x1000... but only a relatively small number (~20) of the entries are non-zero.
  In Java, I would store only non-zero elements, in:
 
- HashMap<TupleN, Data> matrix as a data type in general case, where TupleN is a value class (with a custom hash function) and contains element locations.
- In case of 2 dimensions I would combine them in long type HashMap<Long, Data> m and use m.get(((Long)i1<<32)+i2);, if i need an element.
+ HashMap<TupleN, Data> matrix as a data type in general case, where TupleN is a value class (with a custom hash function) and contains data locations.
+ In case of 2 dimensions I would combine them in long type HashMap<Long, Data> m and use m.get(((Long)i1<<32)+i2);, if i need an data.
 
 
  */

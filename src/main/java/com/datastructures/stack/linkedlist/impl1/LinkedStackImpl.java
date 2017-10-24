@@ -87,7 +87,7 @@ class linkedStack
     {
         return size;
     }
-    /*  Function to push an element to the stack */
+    /*  Function to push an data to the stack */
     public void push(int data)
     {
         Node nptr = new Node (data, null);
@@ -100,7 +100,7 @@ class linkedStack
         }
         size++ ;
     }
-    /*  Function to pop an element from the stack */
+    /*  Function to pop an data from the stack */
     public int pop()
     {
         if (isEmpty() )
@@ -110,7 +110,7 @@ class linkedStack
         size-- ;
         return ptr.getData();
     }
-    /*  Function to check the top element of the stack */
+    /*  Function to check the top data of the stack */
     public int peek()
     {
         if (isEmpty() )
@@ -159,7 +159,7 @@ public class LinkedStackImpl
             switch (choice)
             {
                 case 1 :
-                    System.out.println("Enter integer element to push");
+                    System.out.println("Enter integer data to push");
                     ls.push( scan.nextInt() );
                     break;
                 case 2 :
@@ -220,7 +220,7 @@ Linked Stack Operations
 4. check empty
 5. size
 1
-Enter integer element to push
+Enter integer data to push
 5
 
 Stack = 5
@@ -236,7 +236,7 @@ Linked Stack Operations
 4. check empty
 5. size
 1
-Enter integer element to push
+Enter integer data to push
 33
 
 Stack = 33 5
@@ -252,7 +252,7 @@ Linked Stack Operations
 4. check empty
 5. size
 1
-Enter integer element to push
+Enter integer data to push
 24
 
 Stack = 24 33 5
@@ -268,7 +268,7 @@ Linked Stack Operations
 4. check empty
 5. size
 1
-Enter integer element to push
+Enter integer data to push
 87
 
 Stack = 87 24 33 5
@@ -284,7 +284,7 @@ Linked Stack Operations
 4. check empty
 5. size
 1
-Enter integer element to push
+Enter integer data to push
 99
 
 Stack = 99 87 24 33 5
@@ -300,7 +300,7 @@ Linked Stack Operations
 4. check empty
 5. size
 1
-Enter integer element to push
+Enter integer data to push
 1
 
 Stack = 1 99 87 24 33 5

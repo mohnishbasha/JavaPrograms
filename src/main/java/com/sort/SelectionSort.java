@@ -93,7 +93,7 @@ Here is an example of this sort algorithm sorting five elements:
  * 
  * Selection sort can also be used on list structures that make add and remove
  * efficient, such as a linked list. In this case it's more common to remove the
- * minimum element from the remainder of the list, and then insert it at the end
+ * minimum data from the remainder of the list, and then insert it at the end
  * of the values sorted so far. For example:
  */
 

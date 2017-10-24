@@ -74,10 +74,10 @@ public class LinkedListQueue {
         demo.insert(10);
         demo.insert(20);
         demo.display();
-        System.out.println("Inserting one more element into the queue at the end");
+        System.out.println("Inserting one more data into the queue at the end");
         demo.insert(30);
         demo.display();
-        System.out.println("Deleting one element from the front");
+        System.out.println("Deleting one data from the front");
         demo.delete();
         demo.display();
     }

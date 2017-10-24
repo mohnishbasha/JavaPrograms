@@ -26,16 +26,16 @@ public class ReverseNumber {
      * reverse a number in Java using iteration
      * @return reverse of number
      */
-    public static int reverse(int x){
+    public static int reverse(int num){
         int reverse = 0;
         int remainder = 0;
 
         do{
-            remainder = x%10;
+            remainder = num%10;
             reverse = reverse*10 + remainder;
-            x = x/10;
+            num = num/10;
 
-        }while(x > 0);
+        }while(num > 0);
 
         return reverse;
     }

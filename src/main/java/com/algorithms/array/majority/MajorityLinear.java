@@ -22,7 +22,7 @@ package com.algorithms.array.majority;
  Input: arr[] = {1, 1, 1, 2, 2}, x = 1
  Output: True (x appears more than n/2 times in the given array)
  METHOD 1 (Using Linear Search)
- Linearly search for the first occurrence of the element, once you find it (let at index i), check element at index
+ Linearly search for the first occurrence of the data, once you find it (let at index i), check data at index
  i + n/2. If element is present at i+n/2 then return 1 else return 0.
 
  Output:

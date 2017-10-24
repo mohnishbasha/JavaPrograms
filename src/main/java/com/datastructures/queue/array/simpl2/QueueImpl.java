@@ -41,14 +41,14 @@ class arrayQueue
     {
         return len ;
     }
-    /*  Function to check the front element of the queue */
+    /*  Function to check the front data of the queue */
     public int peek()
     {
         if (isEmpty())
             throw new NoSuchElementException("Underflow Exception");
         return Queue[front];
     }
-    /*  Function to insert an element to the queue */
+    /*  Function to insert an data to the queue */
     public void insert(int i)
     {
         if (rear == -1)
@@ -63,7 +63,7 @@ class arrayQueue
             Queue[++rear] = i;
         len++ ;
     }
-    /*  Function to remove front element from the queue */
+    /*  Function to remove front data from the queue */
     public int remove()
     {
         if (isEmpty())
@@ -123,7 +123,7 @@ public class QueueImpl
             switch (choice)
             {
                 case 1 :
-                    System.out.println("Enter integer element to insert");
+                    System.out.println("Enter integer data to insert");
                     try
                     {
                         q.insert( scan.nextInt() );

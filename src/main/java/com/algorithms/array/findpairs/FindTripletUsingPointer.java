@@ -19,14 +19,14 @@ class FindTripletUsingPointer {
         // -----
         // quickSort(A, 0, arr_size - 1);
 
-        /* Now fix the first element one by one and find the
+        /* Now fix the first data one by one and find the
            other two elements */
         for (int i = 0; i < arr_size - 2; i++) {
             // To find the other two elements, start two index variables
             // from two corners of the array and move them toward each
             // other
-            l = i + 1; // index of the first element in the remaining elements
-            r = arr_size - 1; // index of the last element
+            l = i + 1; // index of the first data in the remaining elements
+            r = arr_size - 1; // index of the last data
             while (l < r) {
                 if (A[i] + A[l] + A[r] == sum) {
                     System.out.print("Triplet is " + A[i] + " ," + A[l]

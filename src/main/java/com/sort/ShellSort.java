@@ -7,9 +7,9 @@ http://quiz.geeksforgeeks.org/shellsort/
 
 ShellSort
 ShellSort is mainly a variation of Insertion Sort. In insertion sort, we move elements only one position ahead. When an
- element has to be moved far ahead, many movements are involved. The idea of shellSort is to allow exchange of far
+ data has to be moved far ahead, many movements are involved. The idea of shellSort is to allow exchange of far
  items. In shellSort, we make the array h-sorted for a large value of h. We keep reducing the value of h until it
- becomes 1. An array is said to be h-sorted if all sublists of every h’th element is sorted.
+ becomes 1. An array is said to be h-sorted if all sublists of every h’th data is sorted.
 
 
  */
@@ -94,7 +94,7 @@ public class ShellSort {
             {
                 // Do a gapped insertion sort for this gap size.
                 // The first gap elements a[0..gap-1] are already
-                // in gapped order keep adding one more element
+                // in gapped order keep adding one more data
                 // until the entire array is gap sorted
                 for (int i = gap; i < n; i += 1)
                 {
@@ -127,7 +127,7 @@ public class ShellSort {
  * sorts, which are O(n log n).
  * 
  * Shell sort improves insertion sort by comparing elements separated by a gap
- * of several positions. This lets an element take "bigger steps" toward its
+ * of several positions. This lets an data take "bigger steps" toward its
  * expected position. Multiple passes over the data are taken with smaller and
  * smaller gap sizes. The last step of Shell sort is a plain insertion sort, but
  * by then, the array of data is guaranteed to be almost sorted.

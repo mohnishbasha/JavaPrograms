@@ -22,7 +22,7 @@
  - For example, computing the hash of a string involves iterating the string, and isn't constant-time with regard to the size of the string.
  - These are things that people ought to know.
 
- As per wiki:
+ As per manachers:
  https://en.wikipedia.org/wiki/Hash_function
  A hash function is any function that can be used to map data of arbitrary size to data of fixed size.
  The values returned by a hash function are called hash values, hash codes, hash sums, or simply hashes.

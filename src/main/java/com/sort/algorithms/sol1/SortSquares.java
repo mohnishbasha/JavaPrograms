@@ -31,7 +31,7 @@ class SortSquares
         // in merge sort to merge to two sorted array
         // here both two half are sorted and we traverse
         // first half in reverse meaner because
-        // first half contain negative element
+        // first half contain negative data
         int i = k-1; // Initial index of first half
         int j = k; // Initial index of second half
         int ind = 0; // Initial index of temp array

@@ -10,7 +10,7 @@ package com.sort.binarytreesort;
  in BST, the result would be the sorted list of elements in descending order.
 
  The following code in java will implement the BST, the code is self-explanatory. In this implementation, recursive
- approach is used for inserting the new element in the tree instead of iterative approach.
+ approach is used for inserting the new data in the tree instead of iterative approach.
  *
  * Average performance	O(n log n)
  * http://suresolution.blogspot.com/2012/07/tree-sort-binary-search-tree.html
@@ -21,7 +21,7 @@ package com.sort.binarytreesort;
  * BASIC NODE STORED IN A TREE.
  */
 class Node {
-    public Object element;
+    public Object data;
     public Node left;
     public Node right;
 
@@ -31,7 +31,7 @@ class Node {
     }
 
     public Node(Object theElement, Node lLink, Node rLink) {
-        element = theElement;
+        data = theElement;
         this.left = lLink;
         this.right = rLink;
     }
@@ -55,14 +55,14 @@ public class BinaryTreeSort {
      * SMALLER (MOVE TO LEFT-SUBTREE) OR GREATER (MOVE TO RIGHT-SUBTREE); AND
      * ACCORDINGLY POSITION DECIDED.
      */
-    public Node insert(Node node, Integer x) {
+    public Node insert(Node node, Integer num) {
         if (node == null) {
-            return node = new Node(x);
+            return node = new Node(num);
         }
-        if (x < (Integer) node.element) {
-            node.left = insert(node.left, x);
+        if (num < (Integer) node.data) {
+            node.left = insert(node.left, num);
         } else {
-            node.right = insert(node.right, x);
+            node.right = insert(node.right, num);
         }
         return node;
     }
@@ -72,7 +72,7 @@ public class BinaryTreeSort {
     public void inOrder(Node node) {
         if (node != null) {
             inOrder(node.left);
-            System.out.print(((Integer) node.element).intValue() + ",");
+            System.out.print(((Integer) node.data).intValue() + ",");
             inOrder(node.right);
         }
     }
@@ -82,7 +82,7 @@ public class BinaryTreeSort {
     public void descOrder(Node node) {
         if (node != null) {
             descOrder(node.right);
-            System.out.print(((Integer) node.element).intValue() + ",");
+            System.out.print(((Integer) node.data).intValue() + ",");
             descOrder(node.left);
         }
     }

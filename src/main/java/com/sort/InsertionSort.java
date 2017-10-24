@@ -129,19 +129,19 @@ public class InsertionSort {
  * first part a0, ..., ai-1 is already sorted, the second part ai, ..., an-1 is
  * still unsorted (i 0, ..., n).
  * 
- * In order to insert element ai into the sorted part, it is compared with ai-1,
- * ai-2 etc. When an element aj with ajai is found, ai is inserted behind it. If
- * no such element is found, then ai is inserted at the beginning of the
+ * In order to insert data ai into the sorted part, it is compared with ai-1,
+ * ai-2 etc. When an data aj with ajai is found, ai is inserted behind it. If
+ * no such data is found, then ai is inserted at the beginning of the
  * sequence.
  * 
- * After inserting element ai the length of the sorted part has increased by
+ * After inserting data ai the length of the sorted part has increased by
  * one. In the next iteration, ai+1 is inserted into the sorted part etc. While
- * at the beginning the sorted part consists of element a0 only, at the end it
+ * at the beginning the sorted part consists of data a0 only, at the end it
  * consists of all elements a0, ..., an-1.
  * 
  * Example: The following table shows the steps for sorting the sequence 5 7 0 3
  * 4 2 6 1. On the left side the sorted part of the sequence is shown in red.
- * For each iteration, the number of positions the inserted element has moved is
+ * For each iteration, the number of positions the inserted data has moved is
  * shown in brackets. Altogether this amounts to 17 steps.
  */
 

@@ -94,8 +94,8 @@ public class QueueUsingLL
         do
         {
             System.out.println("##MENU##");
-            System.out.println("1.Insert element in queue");
-            System.out.println("2.Remove element from queue");
+            System.out.println("1.Insert data in queue");
+            System.out.println("2.Remove data from queue");
             System.out.println("3.Peek Element in queue");
             System.out.println("4.Display queue");
             System.out.println("5.Exit");
@@ -103,13 +103,13 @@ public class QueueUsingLL
             ch=Integer.parseInt(obj.readLine());
             switch(ch)
             {
-                case 1:System.out.println("Enter element to be inserted");
+                case 1:System.out.println("Enter data to be inserted");
                     x=Integer.parseInt(obj.readLine());
                     que.enqueue(x);
                     break;
-                case 2:System.out.println("Removed element:"+que.dequeue());
+                case 2:System.out.println("Removed data:"+que.dequeue());
                     break;
-                case 3:System.out.println("Peeked element:"+que.peek());
+                case 3:System.out.println("Peeked data:"+que.peek());
                     break;
                 case 4:que.display();
                     break;

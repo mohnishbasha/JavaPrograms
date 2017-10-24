@@ -8,9 +8,9 @@ http://www.programcreek.com/2014/06/leetcode-implement-stack-using-queues-java/
 LeetCode – Implement Stack using Queues (Java)
 
 Implement the following operations of a stack using queues.
-push(x) -- Push element x onto stack.
-pop() -- Removes the element on top of the stack.
-top() -- Get the top element.
+push(x) -- Push data x onto stack.
+pop() -- Removes the data on top of the stack.
+top() -- Get the top data.
 empty() -- Return whether the stack is empty.
 
 Note: only standard queue operations are allowed, i.e., poll(), offer(), peek(), size() and isEmpty() in Java.
@@ -23,7 +23,7 @@ public class StackUsingQueue {
     LinkedList<Integer> queue1 = new LinkedList<Integer>();
     LinkedList<Integer> queue2 = new LinkedList<Integer>();
 
-    // Push element x onto stack.
+    // Push data x onto stack.
     public void push(int x) {
 
         if(empty()){
@@ -48,7 +48,7 @@ public class StackUsingQueue {
         }
     }
 
-    // Removes the element on top of the stack.
+    // Removes the data on top of the stack.
     public void pop() {
         if(queue1.size()>0){
             queue1.poll();
@@ -57,7 +57,7 @@ public class StackUsingQueue {
         }
     }
 
-    // Get the top element.
+    // Get the top data.
     public int top() {
         if(queue1.size()>0){
             return queue1.peek();
