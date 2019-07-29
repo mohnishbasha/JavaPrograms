@@ -29,7 +29,7 @@ public class AsciiToInteger {
     public static int atoi(char[] input) {
 
         long result = 0l; // Initialize result
-        boolean isneg = false;
+        boolean isNegative = false;
 
         // Iterate through all characters of input string and
         // update result
@@ -38,7 +38,7 @@ public class AsciiToInteger {
 
             // check if negative integer.
             if (i == 0 && input[i] == '-') {
-                isneg = true;
+                isNegative = true;
                 continue;
             }
 
@@ -50,13 +50,14 @@ public class AsciiToInteger {
             int digitValue = input[i] - '0';
             result = result * 10 + digitValue;
 
-            if (result > Integer.MAX_VALUE) {
+            if ((!isNegative && result > Integer.MAX_VALUE)
+                    || (isNegative && result - 1 > Integer.MAX_VALUE) ) {
                 throw new ArithmeticException("integer");
             }
 
         }
 
-        if (isneg) {
+        if (isNegative) {
             result = result * -1;
         }
 
