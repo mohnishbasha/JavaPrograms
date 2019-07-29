@@ -1,3 +1,3 @@
 # JavaPrograms
 
-- Java Interview programs
+- Java programs
