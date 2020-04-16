@@ -29,7 +29,7 @@ class Node{
     }
 }
 
-public class LRUCache1 {
+class LRUCache1 {
 
     Node head;
     Node tail;

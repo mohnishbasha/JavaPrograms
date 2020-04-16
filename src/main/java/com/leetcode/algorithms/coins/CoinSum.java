@@ -1,4 +1,4 @@
-package com.leetcode.algorigthms.coins;
+package com.leetcode.algorithms.coins;
 
 /*
 https://leetcode.com/problems/coin-change-2/?tab=Solutions
