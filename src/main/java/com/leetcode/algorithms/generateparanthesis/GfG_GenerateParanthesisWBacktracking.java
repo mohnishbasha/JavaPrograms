@@ -37,7 +37,7 @@ public class GfG_GenerateParanthesisWBacktracking {
     // balanced parentheses
     // open store the count of opening parenthesis
     // close store the count of closing parenthesis
-    static void _printParenthesis(char str[], int pos, int n, int open, int close)
+    static void backTrack(char str[], int cur, int n, int open, int close)
     {
         if(close == n)
         {
@@ -49,13 +49,14 @@ public class GfG_GenerateParanthesisWBacktracking {
         }
         else
         {
-            if(open > close) {
-                str[pos] = '}';
-                _printParenthesis(str, pos+1, n, open, close+1);
-            }
             if(open < n) {
-                str[pos] = '{';
-                _printParenthesis(str, pos+1, n, open+1, close);
+                str[cur] = '{';
+                backTrack(str, cur+1, n, open+1, close);
+            }
+
+            if(open > close) {
+                str[cur] = '}';
+                backTrack(str, cur+1, n, open, close+1);
             }
         }
     }
@@ -64,7 +65,7 @@ public class GfG_GenerateParanthesisWBacktracking {
     static void printParenthesis(char str[], int n)
     {
         if(n > 0)
-            _printParenthesis(str, 0, n, 0, 0);
+            backTrack(str, 0, n, 0, 0);
         return;
     }
 

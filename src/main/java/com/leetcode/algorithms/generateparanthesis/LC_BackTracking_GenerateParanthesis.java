@@ -58,27 +58,27 @@ n
  */
 public class LC_BackTracking_GenerateParanthesis {
 
-    public List<String> generateParenthesis(int n) {
+    public List<String> printParenthesis(int n) {
         List<String> ans = new ArrayList();
         backtrack(ans, "", 0, 0, n);
         return ans;
     }
 
-    public void backtrack(List<String> ans, String cur, int open, int close, int max){
-        if (cur.length() == max * 2) {
+    public void backtrack(List<String> ans, String cur, int open, int close, int n){
+        if (cur.length() == n * 2) {
             ans.add(cur);
             return;
         }
 
-        if (open < max)
-            backtrack(ans, cur+"(", open+1, close, max);
+        if (open < n)
+            backtrack(ans, cur+"(", open+1, close, n);
         if (close < open)
-            backtrack(ans, cur+")", open, close+1, max);
+            backtrack(ans, cur+")", open, close+1, n);
     }
 
     public static void main(String args[]) {
         LC_BackTracking_GenerateParanthesis gp = new LC_BackTracking_GenerateParanthesis();
-        System.out.println( gp.generateParenthesis(4));
+        System.out.println( gp.printParenthesis(4));
     }
 
 }
