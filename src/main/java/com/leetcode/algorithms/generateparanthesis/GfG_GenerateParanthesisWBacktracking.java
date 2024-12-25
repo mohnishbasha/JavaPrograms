@@ -73,7 +73,7 @@ public class GfG_GenerateParanthesisWBacktracking {
     public static void main (String[] args)
     {
         int n = 3;
-        char[] str = new char[2 * n];
+        char[] str = new char[2 * n]; // n pairs
         printParenthesis(str, n);
     }
 }
