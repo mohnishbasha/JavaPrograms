@@ -94,26 +94,27 @@ public class NumberOfOccuranceOfn {
         return end - start + 1;
     }
 
-    public static int find(int[] arr, int num, boolean first) {
+    public static int find(int[] array, int num, boolean first) {
         int mid;
         int pos = -1;
 
         int start = 0;
-        int last = arr.length - 1;
+        int end = array.length - 1;
 
-        while (start <= last) {
-            mid = (last + start) / 2;
+        while (start <= end) {
+            mid = (end + start) / 2;
 
-            if (arr[mid] > num) {
-                last = mid - 1;
-            } else if (arr[mid] < num) {
+            if (array[mid] > num) {
+                end = mid - 1;
+            } else if (array[mid] < num) {
                 start = mid + 1;
             }
             //when found number, now we need to find the first occurrence of that repeated number
+            // if array[mid] == num
             else {
                 pos = mid;
                 if (first)
-                    last = mid - 1;
+                    end = mid - 1;
                 else
                     start = mid + 1;
             }

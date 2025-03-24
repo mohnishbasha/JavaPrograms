@@ -25,12 +25,28 @@ x>>>1
 
 public class CountBits {
 
-    public static short countBits(int x) {
+    // Let's see how it works with number 7 (binary 0111):
 
-        short nbits = 0;
-        while ( x != 0) {
-            nbits += (x & 1);
-            x >>>= 1;
+    // Step 1: x = 0111
+    //     0111 & 0001 = 0001  (nbits = 1)
+    //     x >>>= 1 → 0011
+
+    // Step 2: x = 0011
+    //         0011 & 0001 = 0001  (nbits = 2)
+    //         x >>>= 1 → 0001
+
+    // Step 3: x = 0001
+    //         0001 & 0001 = 0001  (nbits = 3)
+    //         x >>>= 1 → 0000
+
+    // Step 4: x = 0000
+    //         Exit loop
+
+    public static short countBits(int x) {
+        short nbits = 0;                // Counter for 1 bits
+        while (x != 0) {               // Continue until all bits are processed
+            nbits += (x & 1);          // Add 1 if least significant bit is 1
+            x >>>= 1;                  // Unsigned right shift by 1
         }
         return nbits;
     }

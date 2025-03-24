@@ -55,7 +55,7 @@ public class FirstNonRepeatingChar {
 
         String s = "Salesforce is the best company\n" +
                 "to work for";
-        System.out.print(FirstNonRepeatingChar.firstNonRepeating(s));
+        System.out.print(FirstNonRepeatingCharClaude.firstNonRepeating(s));
 
     }
 

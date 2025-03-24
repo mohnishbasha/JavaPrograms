@@ -145,7 +145,7 @@ class InOrderTraversal {
 
         /* creating a binary tree and entering
          the nodes */
-        InOrderTraversal tree = new InOrderTraversal();
+        InorderTraversalClaude tree = new InorderTraversalClaude();
         tree.root = new Node(1);
         tree.root.left = new Node(2);
         tree.root.right = new Node(3);

@@ -9,8 +9,8 @@ package com.algorithms.palindrome.substring.cainterview;
 
 // TODO
 
-        import java.io.*;
-        import java.util.*;
+import java.io.*;
+import java.util.*;
 
 class FindSubstringPalindromes
 {

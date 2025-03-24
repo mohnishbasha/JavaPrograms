@@ -32,7 +32,7 @@ class CountSquares1
 {
     static int countSquares(int a, int b)
     {
-        int cnt = 0; // Initialize result
+        int count = 0; // Initialize result
 
         // Traverse through all numbers
         for (int i=a; i<=b; i++)
@@ -41,11 +41,10 @@ class CountSquares1
             // square
             for (int j=1; j*j<=i; j++)
                 if (j*j==i)
-                    cnt++;
-        return cnt;
+                    count++;
+        return count;
     }
 }
-
 
 /*
 
@@ -60,27 +59,25 @@ numbers before b.
 We take ceil of sqrt(a) because we need to consider
 numbers after a.
 
-
 For example, let b = 24, a = 8.  floor(sqrt(b)) = 4,
 ceil(sqrt(a)) = 3.  And number of squares is 4 - 3 + 1
 = 2. The two numbers are 9 and 16.
 Following is the code for the above approach:
 
-
 Time complexity of this solution is O(Log b). A typical implementation of square root for a number n takes time equal
 to O(Log n) [See this for a sample implementation of square root]
 
-
  */
+
 class CountSquares2
 {
     double countSquares(int a, int b)
     {
+        // floor ( sqrt(b) ) - ciel( sqrt(a) ) + 1
         return (Math.floor(Math.sqrt(b)) -
                 Math.ceil(Math.sqrt(a)) + 1);
     }
 }
-
 
 // Driver Code
 public class CountSquareNumbers

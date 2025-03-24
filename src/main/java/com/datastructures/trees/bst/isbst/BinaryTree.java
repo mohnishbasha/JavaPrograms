@@ -63,7 +63,7 @@ public class BinaryTree {
     }
 
     public static void main(String args[]){
-        BinaryTree bt = new BinaryTree();
+        BinaryTreeClaude bt = new BinaryTreeClaude();
         Node head = null;
         head = bt.addNode(10, head);
         head = bt.addNode(15, head);

@@ -21,13 +21,15 @@ public class StringPatterCount {
         System.out.println("Print length:"+letters.length);
 
         for(int i=0;i<letters.length;i++){
-            if(letters.length == i+1){
+
+            if( i+1 == letters.length){
                 sb.append(letters[i]).append(counter);
                 break;
             }
+
             if(letters[i]==letters[i+1]){
                 counter=counter+1;
-            }else{
+            } else {
                 sb.append(letters[i]).append(counter);
                 counter=1;
             }

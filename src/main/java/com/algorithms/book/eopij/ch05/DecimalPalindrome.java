@@ -45,29 +45,26 @@ public class DecimalPalindrome {
 
 
     public static boolean isPalindromeNumber(int x) {
-
-        if ( x < 0) {
-            return false;
+        if (x < 0) {
+            return false;   // Negative numbers aren't palindromes
         }
-
-        final int ndigits  = (int)(Math.floor(Math.log10(x))) + 1;
+    
+        // Calculate number of digits using log10
+        final int ndigits = (int)(Math.floor(Math.log10(x))) + 1;
+        
+        // Create mask to extract leftmost digit
         int msdMask = (int)Math.pow(10, ndigits - 1);
-
-        System.out.println("ndigits: " + ndigits);
-        System.out.println("msdMask: " + msdMask);
-
-
-        for( int i = 0; i < (ndigits/2); ++i)
-        {
-            if(x / msdMask != x%10) {
+    
+        // Compare digits from both ends moving inward
+        for(int i = 0; i < (ndigits/2); ++i) {
+            if(x / msdMask != x % 10) {    // Compare leftmost and rightmost digits
                 return false;
             }
-            x %= msdMask;
-            x /= 10;
-            msdMask /= 100;
+            x %= msdMask;      // Remove leftmost digit
+            x /= 10;           // Remove rightmost digit
+            msdMask /= 100;    // Update mask for next pair of digits
         }
         return true;
-
     }
 
     public static void main (String args[]) {

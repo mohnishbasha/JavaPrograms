@@ -97,7 +97,8 @@ class BinaryTreeLevelOrderTraversalR
             /* use the larger one */
             if (lheight > rheight)
                 return(lheight+1);
-            else return(rheight+1);
+            else 
+                return(rheight+1);
         }
     }
 

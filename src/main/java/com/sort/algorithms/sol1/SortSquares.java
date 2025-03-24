@@ -1,5 +1,7 @@
 package com.sort.algorithms.sol1;
 
+import java.util.Arrays;
+
 /*
 http://www.geeksforgeeks.org/sort-array-converting-elements-squares/
 
@@ -7,6 +9,13 @@ Efficient solution is based on the fact that given array is already sorted. We d
 
 Divide the array into two part “Negative and positive “.
 Use merge function to merge two sorted arrays into a single sorted array.
+
+Example:
+Input  : arr[] =  {-6, -3, -1, 2, 4, 5}
+Output : 1, 4, 9, 16, 25, 36 
+
+Input  : arr[] = {-5, -4, -2, 0, 1}
+Output : 0, 1, 4, 16, 25
 
  */
 
@@ -69,6 +78,22 @@ class SortSquares
             arr[x] = temp[x];
     }
 
+    // Using built in Arrays.sort()
+    // Function to sort an square array
+    public static void sortSquaresUsingArraysSort(int arr[])
+    {
+        int n = arr.length;
+ 
+        // First convert each array elements
+        // into its square
+        for (int i = 0; i < n; i++)
+            arr[i] = arr[i] * arr[i];
+ 
+        // Sort an array using "inbuilt sort function"
+        // in Arrays class.
+        Arrays.sort(arr);
+    }
+
     // Driver program to test above function
     public static void main (String[] args)
     {
@@ -80,7 +105,9 @@ class SortSquares
             System.out.print(arr[i] + " ");
 
         sortSquares(arr);
+
         System.out.println("");
+        
         System.out.println("After Sort ");
         for (int i = 0 ; i < n ; i++)
             System.out.print(arr[i] + " ");

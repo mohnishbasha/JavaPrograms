@@ -24,10 +24,13 @@ The list of double linked nodes make the nodes adding/removal operations O(1).
 import java.util.*;
 
 class Node{
+    
     int key;
     int value;
-    Node pre;
+
+    Node prev;
     Node next;
+
     public Node(int key, int value){
         this.key = key;
         this.value = value;
@@ -55,27 +58,30 @@ public class LRUCache {
         }
         return -1;
     }
+
     public void remove(Node n){
-        if(n.pre!=null){
-            n.pre.next = n.next;
-        }else{
+
+        if(n.prev!=null)
+            n.prev.next = n.next;
+        else
             head = n.next;
-        }
-        if(n.next!=null){
-            n.next.pre = n.pre;
-        }else{
-            end = n.pre;
-        }
+
+        if(n.next!=null)
+            n.next.prev = n.prev;
+        else
+            end = n.prev;
     }
+    
     public void setHead(Node n){
         n.next = head;
-        n.pre = null;
+        n.prev = null;
         if(head!=null)
-            head.pre = n;
+            head.prev = n;
         head = n;
         if(end ==null)
             end = head;
     }
+    
     public void set(int key, int value) {
         if(map.containsKey(key)){
             Node old = map.get(key);

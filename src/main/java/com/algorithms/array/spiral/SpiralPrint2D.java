@@ -30,8 +30,6 @@ Output:
 
  */
 
-import java.io.*;
-
 public class SpiralPrint2D
 {
     // Function print matrix in spiral form

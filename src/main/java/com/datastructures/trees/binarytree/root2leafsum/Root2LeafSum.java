@@ -1,7 +1,7 @@
 package com.datastructures.trees.binarytree.root2leafsum;
 
 
-import com.datastructures.trees.bst.isbst.BinaryTree;
+import com.datastructures.trees.bst.isbst.BinaryTreeClaude;
 import com.datastructures.trees.bst.isbst.Node;
 
 import java.util.ArrayList;
@@ -60,7 +60,7 @@ public class Root2LeafSum {
         Node head = null;
         List<Node> result = new ArrayList<>();
 
-        BinaryTree bt = new BinaryTree();
+        BinaryTreeClaude bt = new BinaryTreeClaude();
         head = bt.addNode(10, head);
         head = bt.addNode(15, head);
         head = bt.addNode(5, head);

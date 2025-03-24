@@ -1,6 +1,56 @@
 package com.sort.countingsort;
 
 /*
+ 
+Counting Sort is a non-comparison-based sorting algorithm that sorts integers or objects that can be mapped to integers (like characters or other discrete objects) by counting the occurrences of each unique element in the input. It is particularly efficient when the range of input values (e.g., the difference between the maximum and minimum values) is not significantly larger than the number of elements to be sorted.
+
+### How Counting Sort Works:
+
+1. **Find the Range**: Determine the minimum and maximum values in the array to define the range of possible values.
+
+2. **Count Occurrences**: Create a "count array" (of size equal to the range of values) to store the count of each unique element in the input array.
+
+3. **Cumulative Count**: Modify the count array to store cumulative counts, which helps in placing elements in their correct sorted position.
+
+4. **Build the Sorted Array**: Traverse the input array, and for each element, use the cumulative count array to place it in the correct position in the output array. Decrement the count in the count array after placing each element.
+
+5. **Copy Back (Optional)**: Copy the sorted output array back to the original array if needed.
+
+### Properties of Counting Sort:
+- **Time Complexity**: O(n + k), where `n` is the number of elements in the input array and `k` is the range of the input values.
+- **Space Complexity**: O(k) for the count array and an additional O(n) for the output array.
+- **Stable**: Counting Sort is stable if implemented correctly, meaning that the relative order of equal elements remains the same.
+
+### When to Use Counting Sort:
+- It is efficient for sorting integers or discrete elements with a limited range.
+- It is not suitable for sorting data with a very large range or floating-point numbers.
+
+### Example:
+
+Input array: `[4, 2, 2, 8, 3, 3, 1]`
+
+Steps:
+1. Find range: Min = 1, Max = 8 (range = 8 - 1 + 1 = 8).
+2. Count occurrences:
+   ```
+   Count array: [0, 1, 2, 2, 1, 0, 0, 0, 1]
+   (index corresponds to the number, and the value at each index is its count)
+   ```
+3. Cumulative count:
+   ```
+   Count array: [0, 1, 3, 5, 6, 6, 6, 6, 7]
+   ```
+4. Build sorted array:
+   ```
+   Sorted array: [1, 2, 2, 3, 3, 4, 8]
+   ```
+
+This is how Counting Sort produces a sorted array efficiently without comparisons.
+
+ * 
+ */
+
+/*
 
 https://www.youtube.com/watch?v=TTnvXY82dtM
 
@@ -65,7 +115,6 @@ Sum       1 1 1 3 3 3 3 4 5 - subs 1 everytime inserted in output
 Input Index  1 2 3 4 5 6
 Output       2 4 4 8 9 10
 
-
  */
 
 class CountingSortG4G
@@ -85,7 +134,7 @@ class CountingSortG4G
 
         // store count of each character
         for (int i=0; i<n; ++i)
-            ++count[arr[i]];
+            count[arr[i]] = count[arr[i]] + 1; // ++count[arr[i]];
 
         // Change count[i] so that count[i] now contains actual
         // position of this character in output array
@@ -104,7 +153,6 @@ class CountingSortG4G
         for (int i = 0; i<n; ++i)
             arr[i] = out[i];
     }
-
 
     void intSort(int arr[])
     {
@@ -155,7 +203,6 @@ class CountingSortG4G
         System.out.println("Sorted character array is ");
         for (int i=0; i<arr.length; ++i)
             System.out.print(arr[i]);
-
 
         int intarr[] = {1,2,3,4,5,2,1,3,7,3,5,6,7,4,9,3,4,7};
 

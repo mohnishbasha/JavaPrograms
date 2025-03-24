@@ -23,26 +23,26 @@ public class RemoveDuplicatesInPlace {
     /*
 
         Remove duplicates from sorted array
-            Given a sorted array, the task is to remove the duplicate elements from the array.
+        Given a sorted array, the task is to remove the duplicate elements from the array.
 
-            Examples:
+        Examples:
 
-            Input  : arr[] = {2, 2, 2, 2, 2}
-            Output : arr[] = {2}
-                     new size = 1
+        Input  : arr[] = {2, 2, 2, 2, 2}
+        Output : arr[] = {2}
+                    new size = 1
 
-            Input  : arr[] = {1, 2, 2, 3, 4, 4, 4, 5, 5}
-            Output : arr[] = {1, 2, 3, 4, 5}
-                     new size = 5
-            Recommended: Please solve it on “PRACTICE” first, before moving on to the solution.
+        Input  : arr[] = {1, 2, 2, 3, 4, 4, 4, 5, 5}
+        Output : arr[] = {1, 2, 3, 4, 5}
+                    new size = 5
+        Recommended: Please solve it on “PRACTICE” first, before moving on to the solution.
 
-            Method 1: (Using extra space)
+        Method 1: (Using extra space)
 
-            Create an auxiliary array temp[] to store unique elements.
-            Traverse input array and one by one copy unique elements of arr[] to temp[]. Also keep track of count of
-            unique elements. Let this count be j.
+        Create an auxiliary array temp[] to store unique elements.
+        Traverse input array and one by one copy unique elements of arr[] to temp[]. Also keep track of count of
+        unique elements. Let this count be j.
 
-            Copy j elements from temp[] to arr[] and return j
+        Copy j elements from temp[] to arr[] and return j
 
      */
 
@@ -53,28 +53,27 @@ public class RemoveDuplicatesInPlace {
             Auxiliary Space : O(1)
      */
 
-    public static int removeDuplicatesInPlace(int[] A) {
-        int n = A.length;
-
+     public static int removeDuplicatesInPlace(int[] array) {
+        int n = array.length;
+        
+        // Handle empty or single-element arrays
         if(n==0 || n==1)
             return n;
-
-        int i=1;
-        for(int j=1; j<n; j++)
-        {
-            if(A[j]!=A[j-1])
-            {
-                A[i]=A[j];
-                i++;
+    
+        int i=1;    // i keeps track of where to place next unique element
+        
+        for(int j=1; j<n; j++) {   // j scans through the array
+            if(array[j] != array[j-1]) {    // Found a new unique element
+                array[i] = array[j];         // Place it at position i
+                i++;                         // Move i to next position
             }
         }
-
-        if(i<n)
-            A[i]='\0';
-
-        return i;
+    
+        if(i<n)                    // Mark end of array (optional)
+            array[i]='\0';
+    
+        return i;    // Return new length
     }
-
 
     public static int removeDuplicatesInPlace1(int a[], int n)
     {

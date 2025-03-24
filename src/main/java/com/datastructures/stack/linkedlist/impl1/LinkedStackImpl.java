@@ -90,13 +90,13 @@ class linkedStack
     /*  Function to push an data to the stack */
     public void push(int data)
     {
-        Node nptr = new Node (data, null);
+        Node node = new Node (data, null);
         if (top == null)
-            top = nptr;
+            top = node;
         else
         {
-            nptr.setLink(top);
-            top = nptr;
+            node.setLink(top);
+            top = node;
         }
         size++ ;
     }

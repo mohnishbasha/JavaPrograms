@@ -34,7 +34,7 @@ import java.util.NoSuchElementException;
  *  the items in LIFO order.
  *  <p>
  *  This implementation uses a singly-linked list with a non-static nested class for
- *  linked-list nodes. See {@link Stack} for a version that uses a static nested class.
+ *  linked-list nodes. See {@link StackUsingArrayClaude} for a version that uses a static nested class.
  *  The <em>push</em>, <em>pop</em>, <em>peek</em>, <em>size</em>, and <em>is-empty</em>
  *  operations all take constant time in the worst case.
  *  <p>

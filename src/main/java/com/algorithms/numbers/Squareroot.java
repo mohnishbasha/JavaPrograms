@@ -16,8 +16,6 @@ Below is C++ implementation of above idea.
 
 Time Complexity: O(Log x)
 
-
-
  */
 
 // A Java program to find floor(sqrt(x)

@@ -3,22 +3,23 @@ package com.sort.bubblesort;
 /* 0(n^2) */
 
 public class BubbleSort {
-	private long[] a;
 
-	private int nElems;
+	private long[] a;        // Array to store elements
+	private int nElems;      // Number of elements in array
 
+	// Constructor - creates array of specified size
 	public BubbleSort(int max) {
 		a = new long[max];
 		nElems = 0;
 	}
 
-	// put data into array
+	// Insert - adds element to array
 	public void insert(long value) {
 		a[nElems] = value;
 		nElems++;
 	}
 
-	// displays array contents
+	// Display - prints array contents
 	public void display() {
 		for (int j = 0; j < nElems; j++)
 			System.out.print(a[j] + " ");
@@ -29,20 +30,23 @@ public class BubbleSort {
 	    int out, in;
 
 	    for (out = nElems - 1; out > 1; out--)
+
 	      // outer loop (backward)
 	      for (in = 0; in < out; in++)
-	        // inner loop (forward)
+	    
+		  // inner loop (forward)
 	        if (a[in] > a[in + 1]) // out of order?
 	          swap(in, in + 1); // swap them
 	    /* 
 	      for (i=0; i<n-1; i++) {
 			for (j=0; j<n-1-i; j++)
-  			if (a[j+1] < a[j]) {  
-    				tmp = a[j];         
-   	 			a[j] = a[j+1];
-   	 			a[j+1] = tmp;
-			}
-		} */
+				if (a[j+1] < a[j]) {  
+						tmp = a[j];         
+					a[j] = a[j+1];
+					a[j+1] = tmp;
+				}
+			} 
+		*/
 	}
 
 	private void swap(int one, int two) {

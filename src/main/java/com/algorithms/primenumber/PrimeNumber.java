@@ -9,6 +9,7 @@ public class PrimeNumber {
 	// This method tests whether a given number is prime or not.
 	public static boolean isPrime(int n) {
 		boolean prime = true;
+		
 		int limit = (int) Math.sqrt(n);
 
 		for (int i = 2; i <= limit; i++) {

@@ -24,11 +24,11 @@ class MajorityBinarySearch {
 
     /* If x is present in arr[low...high] then returns the index of
         first occurrence of x, otherwise returns -1 */
-    static int  _binarySearch(int arr[], int low, int high, int x)
+    static int  _binarySearch(int arr[], int start, int end, int x)
     {
-        if (high >= low)
+        if (end >= start)
         {
-            int mid = (low + high)/2;  /*low + (high - low)/2;*/
+            int mid = (start + end)/2;  /*low + (high - low)/2;*/
 
             /* Check if arr[mid] is the first occurrence of x.
                 arr[mid] is first occurrence if x is one of the following
@@ -39,9 +39,9 @@ class MajorityBinarySearch {
             if ( (mid == 0 || x > arr[mid-1]) && (arr[mid] == x) )
                 return mid;
             else if (x > arr[mid])
-                return _binarySearch(arr, (mid + 1), high, x);
+                return _binarySearch(arr, (mid + 1), end, x);
             else
-                return _binarySearch(arr, low, (mid -1), x);
+                return _binarySearch(arr, start, (mid -1), x);
         }
 
         return -1;

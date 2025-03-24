@@ -1,6 +1,7 @@
 package com.datastructures.stack;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 /*
 http://www.programcreek.com/2014/06/leetcode-implement-stack-using-queues-java/
@@ -20,8 +21,8 @@ Note: only standard queue operations are allowed, i.e., poll(), offer(), peek(),
 
 public class StackUsingQueue {
 
-    LinkedList<Integer> queue1 = new LinkedList<Integer>();
-    LinkedList<Integer> queue2 = new LinkedList<Integer>();
+    Queue<Integer> queue1 = new LinkedList<Integer>();
+    Queue<Integer> queue2 = new LinkedList<Integer>();
 
     // Push data x onto stack.
     public void push(int x) {
